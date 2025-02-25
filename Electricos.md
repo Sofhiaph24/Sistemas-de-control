@@ -1,5 +1,11 @@
-# Titulo de la clase 
-SISTEMAS ELECTRICOS
+# Sistemas-de-control
+Apuntes sistemas de control 2025-1
+
+# Sistemas electricos
+
+## Introduccion 
+El modelamiento de sistemas electricos es muy importante cuando tenemos que predecir la dinamica de un circuito RLC, mediante representaciones matematicas. Estos circuitos estan compuestos por Resistencias (R), capacitores (C) e inductancias  (L), las cuales se resuelven con la ley de ohm, y las leyes de Kirchhoff (mallas y nodos). Estas se resuelven mediante ecuaciones diferenciales, las cuales estan relacionadas con la corriente y tension en el dominio del tiempo    
+
 ## 1. Subtítulos
 
 
