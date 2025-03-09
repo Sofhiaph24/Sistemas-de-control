@@ -11,9 +11,6 @@ El modelamiento de sistemas electricos es muy importante cuando tenemos que pred
 
 Los circuitos RLC son sistemas que estan compuestos por Resistencias, Capacitores e inductancias, del cual podemos determinar como funciona su modelo dinamico dependiendo de su señal de entrada, y su configuracion (Serie, Paralelo, Mixto). Estos sistemas se deben resolver usando la ley de ohm, o las leyes de kirchhoff.
 
-### 1.1 Componentes circuitos RLC
-
-
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
