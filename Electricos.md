@@ -63,6 +63,8 @@ $V_{AB} = i_{c}*1 + y(t)$
 
 $V_{AB} = 2\frac{dy(t)}{dt} + y(t)$
 
+$u(t) - \frac{2dy(t)}{0.5dt} - y(t)\frac{1}{0.5} - 2\frac{dy(t)}{dt} = 0$
+
 $u(t) - 6\frac{dy(t)}{dt} - 2y(t) = 0$
 
 
