@@ -32,7 +32,7 @@ $-u(t) + i(t) * R + l\frac{Di(t)}{dt} + y(t) = 0$
 
 $i(t) = C\frac{dy(t)}{dt}$
 
-$$-u(t) + R*C\frac{dy(t)}{dt} + L\frac{d}{dt}*(C\frac{dy(t)}{dt}) + y(t) = 0$$
+$-u(t) + R*C\frac{dy(t)}{dt} + L\frac{d}{dt}(C\frac{dy(t)}{dt}) + y(t) = 0$
 
 $-u(t) + R*C\frac{dy(t)}{dt} + LC\frac{d^{2}y(t)}{dt^{2}} + y(t) = 0$
 
