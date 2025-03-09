@@ -14,6 +14,10 @@ Los circuitos RLC son sistemas que estan compuestos por Resistencias, Capacitore
   - Ley de ohm
     
 $R=\frac{v(t)}{i(t)}$
+
+  - Carga de un condesador
+
+ $i(t)= C\frac{dv(t)}{dt}$
    
 
 ## 2. Definiciones
