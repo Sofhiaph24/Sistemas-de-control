@@ -32,7 +32,7 @@ Figura 1. Ejemplo1
 
 En este primer ejemplo tenemos un circuito en serie, y necesitamos modelarlo para que quede en terminos del voltaje que pasa por nuestro condensador [y(t)]
 
-Lo primero que hacemos es aplicar la ley de kirchoff de mallas, con la que terminamos todos los voltajes de la malla son iguales a cero
+Lo primero que hacemos es aplicar la ley de kirchoff de mallas, en donde todos los voltajes de la malla son iguales a cero
 
 $-u + v_{R} + v_{L} + v_{C} = 0$
 
@@ -55,17 +55,39 @@ $-u(t) + R*C\frac{dy(t)}{dt} + LC\frac{d^{2}y(t)}{dt^{2}} + y(t) = 0$
 
 Figura 2. Ejemplo 2
 
+Para el segundo ejemplo tambien buscaremos el voltaje que pasa por y(t).
+
+Lo primero que haremos es aplicar la ley de kirshoff de nodos, donde tomamos todas las corrientes del circuito y las iguales a cero.
+
 $i_{u} - i_{1} - i_{c} = 0$
+
+Luego reemplazamos en la formula las corrientes con los valores que vemos en la imagen.
 
 $i_{u}(t) - \frac{V_{AB}}{0.5} - 2\frac{dy(t)}{dt} = 0$
 
-$V_{AB} = i_{c}*1 + y(t)$
+Despues determinamos a cuanto equivale $V_{AB}$, el cual es igual al voltaje que pasa por la resistencia mas el voltaje del condensador. Sabiendo que el voltaje de la resistencia es el valor de la misma por la corriente que pasa $(i_{c})$; y el voltaje que pasa por el condensador es y(t).
+Sabiendo que $i_{c} = 2\frac{dy(t)}{dt}$ lo reemplazamos en la ecuacion para que todo nos quede en terminos de y(t)
 
+$V_{AB} = i_{c}*1 + y(t)$
 $V_{AB} = 2\frac{dy(t)}{dt} + y(t)$
+
+Lo siguiente que se hace es reemplazar $V_{AB}$ en la ecuacion principal.
 
 $u(t) - \frac{2dy(t)}{0.5dt} - y(t)\frac{1}{0.5} - 2\frac{dy(t)}{dt} = 0$
 
+Por ultimo se despeja la ecuacion y se organiza para que se pueda entender como es el modelo 
+
 $u(t) - 6\frac{dy(t)}{dt} - 2y(t) = 0$
+
+
+
+
+
+
+
+
+
+
 
 
 ## 2. Definiciones
