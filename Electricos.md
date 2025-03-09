@@ -25,7 +25,9 @@ $v(t)= L\frac{di(t)}{dt}$
 
 ## 2. Ejemplos 
 ### 2.1 Primer ejemplo
-![Imagen ejemplo 1](Sistemas-de-control/Imagenes/Kirchoff 1.PNG).
+![](Sistemas-de-control/Imagenes
+/Kirchoff 1.PNG).
+
 $-u + v_{R} + v_{L} + v_{C} = 0$
 
 $-u(t) + i(t) * R + l\frac{Di(t)}{dt} + y(t) = 0$
