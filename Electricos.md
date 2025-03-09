@@ -53,17 +53,17 @@ $-u(t) + R*C\frac{dy(t)}{dt} + LC\frac{d^{2}y(t)}{dt^{2}} + y(t) = 0$
 ![](Imagenes/Kirchoff2.PNG).
 Figura 2. Ejemplo 2
 
-i_{u} - i_{1} - i_{c} = 0
+$i_{u} - i_{1} - i_{c} = 0$
 
-i_{u}(t) - \frac{V_{AB}}{0.5} - 2\frac{dy(t)}{dt} = 0
+$i_{u}(t) - \frac{V_{AB}}{0.5} - 2\frac{dy(t)}{dt} = 0$
 
-V_{AB} = i_{c}*1 + y(t)
-V_{AB} = 2\frac{dy(t)}{dt} + y(t)
+$V_{AB} = i_{c}*1 + y(t)$
+$V_{AB} = 2\frac{dy(t)}{dt} + y(t)$
 
-u(t) - \frac{2}{0.5}\frac{dy(t)}{dt} - y(t)\frac{1}{0.5} - 2\frac{dy(t) {dt} = 0
+$u(t) - \frac{2}{0.5}\frac{dy(t)}{dt} - y(t)\frac{1}{0.5} - 2\frac{dy(t) {dt} = 0$
 
 
-u(t) - 6\frac{dy(t)}{dt} - 2y(t) = 0
+$u(t) - 6\frac{dy(t)}{dt} - 2y(t) = 0$
 
 
 ## 2. Definiciones
