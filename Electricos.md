@@ -27,16 +27,24 @@ $v(t)= L\frac{di(t)}{dt}$
 ### 2.1 Primer ejemplo
 
 ![](Imagenes/Kirchoff1.PNG).
-
 Figura 1. Ejemplo1
+
+En este primer ejemplo tenemos un circuito en serie, y necesitamos modelarlo para que quede en terminos del voltaje que pasa por nuestro condensador [y(t)]
+
+Lo primero que hacemos es aplicar la ley de kirchoff de mallas, con la que terminamos todos los voltajes de la malla son iguales a cero
 
 $-u + v_{R} + v_{L} + v_{C} = 0$
 
-$-u(t) + i(t) * R + l\frac{Di(t)}{dt} + y(t) = 0$
+Luego tomamos los voltajes y los remplazamos con las variables que conocemos.
+
+$-u(t) + i(t) * R + l\frac{di(t)}{dt} + y(t) = 0$
+
+Despues hacemos que todo quede con los mismo terminos, que serian los del condesador [y(t)]. Aplicando la formula de carga del condesador podemos dejar en terminos de y(t) la inductancia del circuito.
 
 $i(t) = C\frac{dy(t)}{dt}$
-
 $-u(t) + R*C\frac{dy(t)}{dt} + (L\frac{d}{dt})(C\frac{dy(t)}{dt}) + y(t) = 0$
+
+Por ultimo multiplicamos los terminos reemplazados anteriormente y organizamos la ecuacion para dejarla modelada.
 
 $-u(t) + R*C\frac{dy(t)}{dt} + LC\frac{d^{2}y(t)}{dt^{2}} + y(t) = 0$
 
