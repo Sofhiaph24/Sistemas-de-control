@@ -25,7 +25,7 @@ $v(t)= L\frac{di(t)}{dt}$
 
 ## 2. Ejemplos 
 ### 2.1 Primer ejemplo
-
+![Imagen ejemplo 1](C:\Users\Nokor\Desktop\Nueva carpeta\UUUUU\2025-I\Img Resumenes).
 $-u + v_{R} + v_{L} + v_{C} = 0$
 
 $-u(t) + i(t) * R + l\frac{Di(t)}{dt} + y(t) = 0$
