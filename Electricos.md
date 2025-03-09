@@ -26,7 +26,7 @@ $v(t)= L\frac{di(t)}{dt}$
 ## 2. Ejemplos 
 ### 2.1 Primer ejemplo
 
-![](Sistemas-de-control/Imagenes/Kirchoff1.PNG).
+![](Imagenes/Kirchoff1.PNG).
 
 Figura 1. Ejemplo1
 
