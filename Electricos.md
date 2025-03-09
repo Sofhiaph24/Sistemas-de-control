@@ -22,7 +22,20 @@ $R=\frac{v(t)}{i(t)}$
    - Carga de un inductor
 
 $v(t)= L\frac{di(t)}{dt}$ 
-   
+
+## 2. Ejemplos 
+### 2.1 Primer ejemplo
+
+$-u + v_{R} + v_{L} + v_{C} = 0$
+
+$-u(t) + i(t) * R + l\frac{Di(t)}{dt} + y(t) = 0$
+
+$i(t) = C\frac{dy(t)}{dt}$
+
+$-u(t) + R*C\frac{dy(t)}{dt} + L\frac{d}{dt}*(C\frac{dy(t)}{dt}) + y(t) = 0$
+
+$-u(t) + R*C\frac{dy(t)}{dt} + LC\frac{d^{2}y(t)}{dt^{2}} + y(t) = 0$
+
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
