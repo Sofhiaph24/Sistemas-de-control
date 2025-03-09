@@ -18,6 +18,10 @@ $R=\frac{v(t)}{i(t)}$
   - Carga de un condesador
 
  $i(t)= C\frac{dv(t)}{dt}$
+
+   - Carga de un inductor
+
+$v(t)= L\frac{di(t)}{dt}$ 
    
 
 ## 2. Definiciones
