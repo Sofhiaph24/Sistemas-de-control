@@ -14,7 +14,7 @@ El modelamiento de sistemas se basa en la **conservación de la energía y la ma
 
 Ejemplo de ecuación diferencial usada en sistemas mecánicos:  
 
-\\[ \\frac{d^2x}{dt^2} + b \\frac{dx}{dt} + kx = u(t) \\]  
+$\\[ \\frac{d^2x}{dt^2} + b \\frac{dx}{dt} + kx = u(t) \\]$ 
 
 ### 🔹 Modelos Dinámicos  
 Los modelos dinámicos de sistemas mecánicos se expresan mediante ecuaciones diferenciales de segundo orden:  
