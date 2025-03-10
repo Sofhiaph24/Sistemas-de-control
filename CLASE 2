@@ -1,111 +1,86 @@
-# Apuntes de Clase - Modelamiento de Sistemas Mecánicos
 
-## Introducción  
-El modelamiento de sistemas mecánicos es una parte fundamental en el diseño y control de sistemas físicos. Se basa en la obtención de modelos matemáticos que describen el comportamiento dinámico de un sistema en función del tiempo.
+md_template_content = """ 
+# Sistemas Mecánicos  
 
-## Tipos de Sistemas  
-Los sistemas físicos pueden clasificarse en diferentes tipos según su naturaleza:  
+## 📌 Introducción  
+Este documento contiene apuntes de clase sobre el **modelamiento de sistemas mecánicos**, basado en el documento proporcionado. Se abordan ecuaciones diferenciales, diagramas y conceptos clave en el análisis de sistemas mecánicos.  
 
-- **Mecánico**  
-- **Eléctrico**  
-- **Hidráulico**  
-- **Neumático**  
-- **Térmico**  
-- **Combinaciones de los anteriores**  
+## 📚 Contenido  
 
-En este documento nos enfocaremos en los **sistemas mecánicos**.
+### 🔹 Principio General de Modelamiento  
+El modelamiento de sistemas se basa en la **conservación de la energía y la masa**, expresada como:  
 
----  
+\\[ \\text{Tasa de acumulación} = \\text{Flujo de entrada} - \\text{Flujo de salida} \\]  
 
-## Principio General de Modelamiento  
-El modelamiento de un sistema se basa en el principio de **conservación de la energía y la masa**, que se expresa como:  
+Ejemplo de ecuación diferencial usada en sistemas mecánicos:  
 
-\[ \text{Tasa de acumulación} = \text{Flujo de entrada} - \text{Flujo de salida} \]  
+\\[ \\frac{d^2x}{dt^2} + b \\frac{dx}{dt} + kx = u(t) \\]  
 
-En el contexto de sistemas mecánicos, este principio se traduce en ecuaciones diferenciales que describen el comportamiento dinámico del sistema.
+### 🔹 Modelos Dinámicos  
+Los modelos dinámicos de sistemas mecánicos se expresan mediante ecuaciones diferenciales de segundo orden:  
 
----  
-
-## Modelos Dinámicos  
-Para describir la evolución de un sistema en el tiempo, se utilizan ecuaciones diferenciales de la forma:  
-
-\[ a_1 \frac{d^2F}{dt^2} + a_2 \frac{dF}{dt} + a_3 F = u(t) \]  
+\\[ a_1 \\frac{d^2F}{dt^2} + a_2 \\frac{dF}{dt} + a_3 F = u(t) \\]  
 
 Donde:  
-- \( F \) es la variable de salida del sistema  
-- \( u(t) \) es la entrada del sistema  
-- Los coeficientes \( a_1, a_2, a_3 \) dependen de las propiedades físicas del sistema
+- \\( F \\) es la variable de salida del sistema.  
+- \\( u(t) \\) es la entrada del sistema.  
+- Los coeficientes \\( a_1, a_2, a_3 \\) dependen de las propiedades físicas del sistema.  
 
 ---  
 
-## Sistemas Masa-Resorte-Amortiguador  
-Uno de los modelos más comunes en los sistemas mecánicos es el **sistema masa-resorte-amortiguador**, que se describe mediante la segunda ley de Newton:  
+## ⚙️ **Sistemas Mecánicos**  
 
-\[ m a = F \]  
+### 🏗️ **Sistemas Masa-Resorte-Amortiguador**  
+Uno de los modelos más comunes en los sistemas mecánicos es el **sistema masa-resorte-amortiguador**, regido por las siguientes ecuaciones:  
 
-### Leyes Físicas Aplicables  
-- **Ley de Hooke (Fuerza del resorte):**  
-  \[ F_R = k_2 \cdot x \]  
-- **Fricción Viscosa:**  
-  \[ F_F = k_1 \cdot v_m \]  
-- **Segunda Ley de Newton:**  
-  \[ F = m \cdot a \]  
+\\[ F_R = k_2 \\cdot x \\]  
+\\[ F_F = k_1 \\cdot v_m \\]  
+\\[ F = m \\cdot a \\]  
 
-La ecuación diferencial que describe el sistema es:  
+📌 **Diagrama de cuerpo libre:**  
 
-\[ u(t) - k_2 y(t) - k_1 \frac{dy}{dt} = m \frac{d^2y}{dt^2} \]  
+![Diagrama Masa-Resorte-Amortiguador](ruta_de_la_imagen.png)  
 
-Donde:  
-- \( k_2 \) es la constante del resorte  
-- \( k_1 \) es el coeficiente de amortiguamiento  
-- \( m \) es la masa  
-- \( y(t) \) es la posición en función del tiempo  
+### 🏗️ **Sistemas Mecánicos Más Complejos**  
+Para sistemas con múltiples masas y resortes, se aplican ecuaciones diferenciales para cada masa individualmente:  
 
----  
+\\[ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \\frac{d(x_1(t) - x_2(t))}{dt} = m_1 \\frac{d^2x_1}{dt^2} \\]  
 
-## Sistemas Mecánicos Más Complejos  
-En sistemas con múltiples masas y resortes, las ecuaciones diferenciales se obtienen aplicando las leyes físicas a cada masa individualmente.  
+\\[ k_2 (x_1(t) - x_2(t)) + b \\frac{d(x_1(t) - x_2(t))}{dt} - k_3 x_2(t) = m_2 \\frac{d^2x_2}{dt^2} \\]  
 
-Ejemplo de un sistema con dos masas:  
+📌 **Ejemplo de un sistema mecánico con múltiples masas:**  
 
-\[ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \frac{d^2x_1}{dt^2} \]  
+![Sistema Mecánico Complejo](ruta_de_la_imagen2.png)  
 
-\[ k_2 (x_1(t) - x_2(t)) + b \frac{d(x_1(t) - x_2(t))}{dt} - k_3 x_2(t) = m_2 \frac{d^2x_2}{dt^2} \]  
+### 🔄 **Sistemas Rotacionales**  
+El movimiento rotacional sigue principios comparables al movimiento lineal, pero en términos de torsión y momento de inercia:  
 
----  
+\\[ T = J \\frac{d^2\\theta}{dt^2} \\]  
 
-## Sistemas Rotacionales  
-El movimiento rotacional sigue principios similares al movimiento lineal, pero con magnitudes angulares:  
+Donde \\( J \\) es el momento de inercia y \\( \\theta \\) el ángulo de torsión.  
 
-- **Torsión del resorte:**  
-  \[ F_R = k \cdot \theta \]  
-- **Fricción rotacional:**  
-  \[ F_F = b \cdot \frac{d\theta}{dt} \]  
-- **Momento de inercia:**  
-  \[ T = J \cdot \frac{d^2\theta}{dt^2} \]  
+📌 **Diagrama de cuerpo libre de un sistema rotacional:**  
 
-Ecuación diferencial resultante:  
-
-\[ T(t) - k \theta(t) - b \frac{d\theta}{dt} = J \frac{d^2\theta}{dt^2} \]  
+![Sistema Rotacional](ruta_de_la_imagen3.png)  
 
 ---  
 
-## Conversión de Movimiento Translacional a Rotacional  
-En muchos sistemas, es necesario convertir un movimiento lineal en un movimiento rotacional, lo cual se logra mediante engranajes, palancas o bandas de transmisión.  
+## ✅ **Resumen**  
+✔️ Se han modelado sistemas mecánicos usando ecuaciones diferenciales.  
+✔️ Se presentan los sistemas **masa-resorte-amortiguador** y **rotacionales**.  
+✔️ Se incluyen diagramas para representar los modelos físicos.  
 
-Ejemplo: Un sistema donde una fuerza lineal \( F \) genera un torque \( T \) a través de un radio \( r \):  
-
-\[ T = r \cdot F \]  
-
-Este principio se aplica en mecanismos como transmisiones y sistemas de dirección en vehículos.
+Estos modelos son esenciales en el análisis de control y simulaciones industriales. 🚀  
 
 ---  
 
-## Resumen  
-- Los **sistemas mecánicos** pueden modelarse mediante ecuaciones diferenciales.  
-- La **Ley de Hooke**, la **fricción viscosa** y la **Segunda Ley de Newton** son fundamentales en su análisis.  
-- Los **sistemas masa-resorte-amortiguador** son modelos comunes en mecánica.  
-- Los **sistemas rotacionales** siguen principios similares a los sistemas lineales.  
-- La **conversión de movimiento translacional a rotacional** es clave en muchos sistemas mecánicos.  
+📌 **Nota:** Agregar las imágenes correspondientes en las rutas indicadas.  
+"""
 
-Estos modelos permiten diseñar y analizar sistemas de control para aplicaciones industriales y de ingeniería mecánica.
+# Guardar el contenido en un archivo Markdown
+md_template_file_path = "/mnt/data/Apuntes_Sistemas_Mecanicos_Plantilla.md"
+with open(md_template_file_path, "w", encoding="utf-8") as file:
+    file.write(md_template_content)
+
+md_template_file_path
+
