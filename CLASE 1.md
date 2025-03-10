@@ -11,18 +11,39 @@ El modelado matemático de un sistema dinámico consiste en describir su comport
 🔹Principios de conservación de energía y masa en sistemas térmicos e hidráulicos.
 
 
-📌# Sistemas Mecanicos 
+# Sistemas Mecanicos 
 Para modelar sistemas mecanicos necesitamos tener un conocimiento basico de la mecanica clasica y las ley Newton,tambien tener conocimiento sobre matematicas para poder resolver ecuaciones diferenciales para comprender el sistema.En los sistemas Mecanicos tendremos sistemas de describen la corelacion entre fuera, desplazamiento, friccion, velocidades y aceleracion. Tener estos conocimientos y poder hacer el modelamiento del sistema es muy util ya que nos permite poder evaluar el comportamiento y funcionamiento de un sistema antes de su implementacion fisica.
 ## 1. Masa Resorte Amortiguador
 Este sistema es un modelo que usamos para estudiar el comportamiento de los sistemas mecanicos cuando estan expuestos a un movimiento.En sistemas de control es un modelo que representa un sistema dinamico de segundo orden, el cual nos sirve para enteder la estabilidad y el comportamiento fisico ante perturbaciones externas, en este sistemas en espesifico la masa representa la inercia, el resorte representa la elasticidad y el amortiguador introduce disipacion de la energia.
 Este sistema se describe mediante una ecuacion diferencial lineal, que nos permite diseñar controladores que regulen su comportamiento y ayudar a prevenir las oscilaciones y tener un sistema mas estable que es lo que siempre se busca.
-Las ecuaciones que se utilizan este modelamiento son:
-\[ F_R = k_2 \cdot x \]  
-\[ F_F = k_1 \cdot v_m \]  
-\[ F = m \cdot a \]
+
+Las ecuaciones de un sistema masa-resorte-amortiguador son:
+
+$$
+F_R = k_2 \cdot x
+$$
+
+$$
+F_F = k_1 \cdot v_m
+$$
+
+$$
+F = m \cdot a
+$$
+
+Donde:  
+- \( F_R \) es la fuerza del resorte.  
+- \( F_F \) es la fuerza de fricción viscosa.  
+- \( F \) es la fuerza neta aplicada.  
+- \( k_2 \) es la constante del resorte.  
+- \( k_1 \) es el coeficiente de amortiguamiento.  
+- \( v_m \) es la velocidad de la masa.  
+- \( m \) es la masa.  
+- \( a \) es la aceleración.  
+
 Como ya se habia mencionado anteriormente este sistema cueta con 3 principales componentes que se van a describir a continuacion.
 
-### 1.1. Masa (m)
+### 🔑 1.1. Masa (m)
 Es el objeto que se mueve, tiene inercia esto quiere decir que resiste cambios en su movimiento.
 
 Almacena energia cinetica cuando esta en movimiento.
