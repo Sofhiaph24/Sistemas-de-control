@@ -64,7 +64,7 @@ Disipa energia en forma de calor.
 ## 3. Ejemplos
 💡**Ejemplo 1:** # Modelo Matemático de la Suspensión de un Automóvil
 
-![Diagrama de la suspensión](ejemplo.png)
+![](Imagenes/ejemplos.png).
 
 
 El sistema está compuesto por una masa \( m \) que representa el chasis del vehículo, un resorte con constante \( k_2 \), y un amortiguador con coeficiente \( k_1 \). También se considera una fuerza de entrada \( u(t) \).
