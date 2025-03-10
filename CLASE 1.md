@@ -1,4 +1,4 @@
-📌# Sistemas Dinamicos
+# Sistemas Dinamicos
 Los sistemas dinamicos son aquellos cuyos estados van variando en el tiempo en respuestas a entradas o perturvaciones externas sistemas dinamico.
 El estudio de sistemas dinámicos es indispensable para el diseño y análisis de sistemas de control, para asi predecir su comportamiento ante diferentes condiciones,perturvaciones  y garantinzar su rendimiento de una manera mas optima.
 
