@@ -48,12 +48,12 @@ Es el objeto que se mueve, tiene inercia esto quiere decir que resiste cambios e
 
 Almacena energia cinetica cuando esta en movimiento.
 
-### 1.2. Resorte (k)
+### 🔑 1.2. Resorte (k)
 Es aquel que se estira o se comprime.
 
 Sigue la Ley de Hooke en la cual k es la constante del resorte,x cuando se estira o se comprime 
 
-### 1.3. Amortiguador (c)
+### 🔑 1.3. Amortiguador (c)
 Hace referencia a un piston que frena el movimiento.
 
 La fuerza que hace depende de la velocidad.
