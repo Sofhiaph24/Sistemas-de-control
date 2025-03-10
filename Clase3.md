@@ -26,6 +26,7 @@ $\frac{e_{o}-e_{i}}{R_{2}} - \frac{e_{i}}{R_{1}} = 0$
 Por ultimo lo que hacemos es separar variables y despejar la ecuacion para que nos quede el modelo de la salida del amplificador $(e_{o})$
 
 $\frac{e_{o}}{R_{2}} = e_{i}(\frac{1}{R_{2}} + \frac{1}{R_{1}})$
+
 $e_{o} = e_{i}(1 + \frac{R_{2}}{R_{1}})$
 
 ## 2. Definiciones
