@@ -1,7 +1,39 @@
-# Titulo de la clase 
-El título de cada clase, correspondiente al tema general que se trabaje en clase. Siempre después de cada título de clase, redactar una breve introducción (mínimo un párrafo) que de una mirada general al tema
-## 1. Subtítulos
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+# RESUMEN CLASE 5
+
+## 1. Introduccion
+
+## 2. Transformada de Laplace
+### 2.1. Tipos de transformadas
+### 2.2. Ejemplo 
+
+## 3. Funcion de transferencia 
+### 3.1. Ejemplo
+
+## 4. Hallar los zeros de la funcion 
+### 4.1. Ejemplo
+
+## 5. Hallar los polos de la funcion
+### 5.1. Ejemplo 
+
+## 6. Entradas de un sistema
+### 6.1. Entrada paso-escalon 
+### 6.2. Entrada rampa
+### 6.3. Entrada parabola 
+
+## 7. Sistemas de primer orden 
+### 7.1. Ecuaciones diferenciales
+### 7.2. Forma canonica 
+### 7.3. Ejemplo
+
+## 8. Respuesta ante una entrada tipo paso 
+## 9. Respuesta ante una entrada tipo rampa 
+## 10. Respuesta ante una entrada tipo impulso 
+
+## 11. Ejercicios
+## 12. Conclusiones 
+## 13. Definiciones
+## 14. Referencias 
+
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
