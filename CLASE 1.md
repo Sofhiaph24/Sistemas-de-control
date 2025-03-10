@@ -62,7 +62,35 @@ Disipa energia en forma de calor.
 
 
 ## 3. Ejemplos
-💡**Ejemplo 1:**
+💡**Ejemplo 1:** # Modelo Matemático de la Suspensión de un Automóvil
+
+![Diagrama de la suspensión](image.png)
+
+El sistema está compuesto por una masa \( m \) que representa el chasis del vehículo, un resorte con constante \( k_2 \), y un amortiguador con coeficiente \( k_1 \). También se considera una fuerza de entrada \( u(t) \).
+
+## Ecuación de Movimiento
+
+Aplicando la Segunda Ley de Newton:
+
+$$
+u(t) + F_w - F_R - F_F = m \cdot a
+$$
+
+Sustituyendo las expresiones para cada fuerza:
+
+$$
+- u(t) + mg - k_2 y(t) - k_1 y'(t) = m y''(t)
+$$
+
+Donde:
+- \( u(t) \) es la entrada al sistema.
+- \( mg \) es la fuerza gravitacional.
+- \( k_2 y(t) \) es la fuerza restauradora del resorte.
+- \( k_1 y'(t) \) es la fuerza de amortiguamiento.
+- \( y''(t) \) es la aceleración del sistema.
+
+---
+
 
 ## 4. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
