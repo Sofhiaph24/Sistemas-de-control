@@ -35,13 +35,42 @@ $e_{o} = e_{i}(1 + \frac{R_{2}}{R_{1}})$
 ## 2 Sistemas hidraulicos 
 ### 2.1 Introduccion
 
+Los sistemas hidraulicos operan una tecnolofia que utiliza los liquidos para generar movimiento o fuerza. Se rige con el principio de la ley de Pascal, la cual dice que la presion que se aplica sobre un fluido confinado se transmite uniformemente en todas las direcciones. Gracias a eso lo sistemas pueden incrementar la fuerza y manejar un control mas preciso de las maquinas.
+
 ### 2.2 Sistemas
+
+Estos sistemas funcionan mediante el principio de Pascal, y es fundamental que mantengan un nivel de flujo constante, donde:
+  - $q_{i}, q_{o}$; son los flujos de entrada y salida del liquido 
+  - R, Es la resistencia al flujo
+  - A, Area transversal del tanque
+  - h, Nivel de liquido en el tanque  
+
 ### 2.3 Modelamiento tanques
-#### 2.3.1 Ejemplo 
-### 2.4 Modelamiento dos tanques
-#### 2.4.1 Ejemplo
-### 2.5 Modelamiento tanques interconectados
-#### 2.5.1 Ejemplo
+
+Flujo de salida del tanque:
+
+ - $q_{1} = \frac{h_{1}}{R_{1}}$
+
+Intercambio de masa:
+
+ - $A_{1}\frac{dh_{1}}{dt} = q_{i} - q_{1}$
+
+Modelo entrada $q_{i}$ y $h_{1}$ como altura 
+
+- $q_{1} = \frac{d_{1}}{R1}$
+- $A_{1}\frac{dh_{1}}{dt} = q_{i} - q_{1}$
+- $A_{1}\frac{dh_{1}}{dt} = q_{i} - \frac{h_{1}}{R_{1}}$
+
+Modelo entrada $q_{i}$ y $q_{1}$ como salida
+
+- $q_{1} = \frac{h_{1}}{R1}$
+- $A_{1}\frac{dh_{1}}{dt} = q_{i} - q_{1}$
+- $h_{1} = q_{1}*R1$
+- $R1A_{1}\frac{dh_{1}}{dt} = q_{i} - q_{1}$ 
+ 
+#### 2.3.1 Ejemplo con dos tanques
+#### 2.3.2 Ejemplo tanques interconectados
+
 ### 2.6 Ejercicio
 ### 2.7 Conclusion
 
