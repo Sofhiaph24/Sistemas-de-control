@@ -1,38 +1,17 @@
-# RESUMEN CLASE 5
+# Sistemas de primer orden 
 
 ## 1. Introduccion
+## 2 Ecuaciones diferenciales
+## 3 Forma canonica 
+## 4 Ejemplo
+## 5. Respuesta ante una entrada tipo paso 
+## 6. Respuesta ante una entrada tipo rampa 
+## 7. Respuesta ante una entrada tipo impulso 
 
-## 2. Transformada de Laplace
-### 2.1. Tipos de transformadas
-### 2.2. Ejemplo 
-
-## 3. Funcion de transferencia 
-### 3.1. Ejemplo
-
-## 4. Hallar los zeros de la funcion 
-### 4.1. Ejemplo
-
-## 5. Hallar los polos de la funcion
-### 5.1. Ejemplo 
-
-## 6. Entradas de un sistema
-### 6.1. Entrada paso-escalon 
-### 6.2. Entrada rampa
-### 6.3. Entrada parabola 
-
-## 7. Sistemas de primer orden 
-### 7.1. Ecuaciones diferenciales
-### 7.2. Forma canonica 
-### 7.3. Ejemplo
-
-## 8. Respuesta ante una entrada tipo paso 
-## 9. Respuesta ante una entrada tipo rampa 
-## 10. Respuesta ante una entrada tipo impulso 
-
-## 11. Ejercicios
-## 12. Conclusiones 
-## 13. Definiciones
-## 14. Referencias 
+## 8. Ejercicios
+## 9. Conclusiones 
+## 10. Definiciones
+## 11. Referencias 
 
 
 ## 2. Definiciones
