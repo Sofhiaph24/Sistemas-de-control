@@ -81,6 +81,7 @@ $A_{1}R_{1}R_{2}A_{2}\frac{d^{2}q_{2}}{dt^{2}} + (A_{1}R_{1} + A_{1}R_{2} + R_{2
 
 ## 2 Sistemas termicos
 ### 2.1 Introduccion 
+
 ### 2.2 Sistema
 ### 2.3 Modelamiento
 ### 2.4 Conclusion 
