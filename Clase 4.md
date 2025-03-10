@@ -70,10 +70,15 @@ Modelo entrada $q_{i}$ y $q_{1}$ como salida
  
 #### 2.3.1 Ejemplo con dos tanques
 $q_{i} = A_{1}\frac{dh_{1}}{dt} + q_{1}$
+
 $q_{i} = A_{1}\frac{dh_{1}}{dt} + \frac{h_{1}}{R_{1}}$
+
 $\frac{h_{1}}{R_{1}} = q_{i} - A_{1}\frac{dh_{1}}{dt}$
+
 $\frac{h_{1}}{R_{1}} - q_{2} = A_{2}\frac{dh_{2}}{dt}$
+
 $\frac{h_{1}}{R_{1}} = A_{2}\frac{dh_{2}}{dt} + q_{2}$
+
 $q_{i} - A_{}\frac{dh_{1}}{dt} = A_{2}\frac{dh_{2}}{dt} + q_{2}$
 
 #### 2.3.2 Ejemplo tanques interconectados
