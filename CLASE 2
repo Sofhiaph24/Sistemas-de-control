@@ -1,0 +1,111 @@
+# Apuntes de Clase - Modelamiento de Sistemas Mecánicos
+
+## Introducción  
+El modelamiento de sistemas mecánicos es una parte fundamental en el diseño y control de sistemas físicos. Se basa en la obtención de modelos matemáticos que describen el comportamiento dinámico de un sistema en función del tiempo.
+
+## Tipos de Sistemas  
+Los sistemas físicos pueden clasificarse en diferentes tipos según su naturaleza:  
+
+- **Mecánico**  
+- **Eléctrico**  
+- **Hidráulico**  
+- **Neumático**  
+- **Térmico**  
+- **Combinaciones de los anteriores**  
+
+En este documento nos enfocaremos en los **sistemas mecánicos**.
+
+---  
+
+## Principio General de Modelamiento  
+El modelamiento de un sistema se basa en el principio de **conservación de la energía y la masa**, que se expresa como:  
+
+\[ \text{Tasa de acumulación} = \text{Flujo de entrada} - \text{Flujo de salida} \]  
+
+En el contexto de sistemas mecánicos, este principio se traduce en ecuaciones diferenciales que describen el comportamiento dinámico del sistema.
+
+---  
+
+## Modelos Dinámicos  
+Para describir la evolución de un sistema en el tiempo, se utilizan ecuaciones diferenciales de la forma:  
+
+\[ a_1 \frac{d^2F}{dt^2} + a_2 \frac{dF}{dt} + a_3 F = u(t) \]  
+
+Donde:  
+- \( F \) es la variable de salida del sistema  
+- \( u(t) \) es la entrada del sistema  
+- Los coeficientes \( a_1, a_2, a_3 \) dependen de las propiedades físicas del sistema
+
+---  
+
+## Sistemas Masa-Resorte-Amortiguador  
+Uno de los modelos más comunes en los sistemas mecánicos es el **sistema masa-resorte-amortiguador**, que se describe mediante la segunda ley de Newton:  
+
+\[ m a = F \]  
+
+### Leyes Físicas Aplicables  
+- **Ley de Hooke (Fuerza del resorte):**  
+  \[ F_R = k_2 \cdot x \]  
+- **Fricción Viscosa:**  
+  \[ F_F = k_1 \cdot v_m \]  
+- **Segunda Ley de Newton:**  
+  \[ F = m \cdot a \]  
+
+La ecuación diferencial que describe el sistema es:  
+
+\[ u(t) - k_2 y(t) - k_1 \frac{dy}{dt} = m \frac{d^2y}{dt^2} \]  
+
+Donde:  
+- \( k_2 \) es la constante del resorte  
+- \( k_1 \) es el coeficiente de amortiguamiento  
+- \( m \) es la masa  
+- \( y(t) \) es la posición en función del tiempo  
+
+---  
+
+## Sistemas Mecánicos Más Complejos  
+En sistemas con múltiples masas y resortes, las ecuaciones diferenciales se obtienen aplicando las leyes físicas a cada masa individualmente.  
+
+Ejemplo de un sistema con dos masas:  
+
+\[ u(t) - k_1 x_1(t) - k_2 (x_1(t) - x_2(t)) - b \frac{d(x_1(t) - x_2(t))}{dt} = m_1 \frac{d^2x_1}{dt^2} \]  
+
+\[ k_2 (x_1(t) - x_2(t)) + b \frac{d(x_1(t) - x_2(t))}{dt} - k_3 x_2(t) = m_2 \frac{d^2x_2}{dt^2} \]  
+
+---  
+
+## Sistemas Rotacionales  
+El movimiento rotacional sigue principios similares al movimiento lineal, pero con magnitudes angulares:  
+
+- **Torsión del resorte:**  
+  \[ F_R = k \cdot \theta \]  
+- **Fricción rotacional:**  
+  \[ F_F = b \cdot \frac{d\theta}{dt} \]  
+- **Momento de inercia:**  
+  \[ T = J \cdot \frac{d^2\theta}{dt^2} \]  
+
+Ecuación diferencial resultante:  
+
+\[ T(t) - k \theta(t) - b \frac{d\theta}{dt} = J \frac{d^2\theta}{dt^2} \]  
+
+---  
+
+## Conversión de Movimiento Translacional a Rotacional  
+En muchos sistemas, es necesario convertir un movimiento lineal en un movimiento rotacional, lo cual se logra mediante engranajes, palancas o bandas de transmisión.  
+
+Ejemplo: Un sistema donde una fuerza lineal \( F \) genera un torque \( T \) a través de un radio \( r \):  
+
+\[ T = r \cdot F \]  
+
+Este principio se aplica en mecanismos como transmisiones y sistemas de dirección en vehículos.
+
+---  
+
+## Resumen  
+- Los **sistemas mecánicos** pueden modelarse mediante ecuaciones diferenciales.  
+- La **Ley de Hooke**, la **fricción viscosa** y la **Segunda Ley de Newton** son fundamentales en su análisis.  
+- Los **sistemas masa-resorte-amortiguador** son modelos comunes en mecánica.  
+- Los **sistemas rotacionales** siguen principios similares a los sistemas lineales.  
+- La **conversión de movimiento translacional a rotacional** es clave en muchos sistemas mecánicos.  
+
+Estos modelos permiten diseñar y analizar sistemas de control para aplicaciones industriales y de ingeniería mecánica.
