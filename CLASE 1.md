@@ -64,8 +64,7 @@ Disipa energia en forma de calor.
 ## 3. Ejemplos
 💡**Ejemplo 1:** # Modelo Matemático de la Suspensión de un Automóvil
 
-![](Imagenes/ejemplos.png).
-
+![Diagrama de la suspensión](Imagenes/ejemplo1.png).
 
 El sistema está compuesto por una masa \( m \) que representa el chasis del vehículo, un resorte con constante \( k_2 \), y un amortiguador con coeficiente \( k_1 \). También se considera una fuerza de entrada \( u(t) \).
 
@@ -84,13 +83,15 @@ $$
 $$
 
 Donde:
-- \( u(t) \) es la entrada al sistema.
-- \( mg \) es la fuerza gravitacional.
-- \( k_2 y(t) \) es la fuerza restauradora del resorte.
-- \( k_1 y'(t) \) es la fuerza de amortiguamiento.
-- \( y''(t) \) es la aceleración del sistema.
+-$$ \( u(t) \) es la entrada al sistema.$$
+-$$ \( mg \) es la fuerza gravitacional.$$
+-$$ \( k_2 y(t) \) es la fuerza restauradora del resorte.$$
+- $$\( k_1 y'(t) \) es la fuerza de amortiguamiento.$$
+- $$\( y''(t) \) es la aceleración del sistema.$$
 
 ---
+
+
 
 
 ## 4. Ecuaciones
