@@ -43,6 +43,7 @@ $-u(t) + i(t) * R + l\frac{di(t)}{dt} + y(t) = 0$
 Despues hacemos que todo quede con los mismo terminos, que serian los del condesador [y(t)]. Aplicando la formula de carga del condesador podemos dejar en terminos de y(t) la inductancia del circuito.
 
 $i(t) = C\frac{dy(t)}{dt}$
+
 $-u(t) + R*C\frac{dy(t)}{dt} + (L\frac{d}{dt})(C\frac{dy(t)}{dt}) + y(t) = 0$
 
 Por ultimo multiplicamos los terminos reemplazados anteriormente y organizamos la ecuacion para dejarla modelada.
@@ -69,6 +70,7 @@ Despues determinamos a cuanto equivale $V_{AB}$, el cual es igual al voltaje que
 Sabiendo que $i_{c} = 2\frac{dy(t)}{dt}$ lo reemplazamos en la ecuacion para que todo nos quede en terminos de y(t)
 
 $V_{AB} = i_{c}*1 + y(t)$
+
 $V_{AB} = 2\frac{dy(t)}{dt} + y(t)$
 
 Lo siguiente que se hace es reemplazar $V_{AB}$ en la ecuacion principal.
