@@ -12,7 +12,13 @@ El amplificador no inversor es una connfiguracion del amplificador operacional, 
 
 ![](Imagenes/Amplificadores1.PNG).
 
+i_{1} - i_{2} = 0 
 
+\frac{e_{o}-e_{i}}{R_{2}} - \frac{e_{i}}{R_{1}} = 0
+
+\frac{e_{o}}{R_{2}} = e_{i}(\frac{1}{R_{2}} + \frac{1}{R_{1}})
+
+e_{o} = e_{i}(1 + \frac{R_{2}}{R_{1}})
 
 ## 2. Definiciones
 Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
