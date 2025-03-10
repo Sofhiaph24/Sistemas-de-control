@@ -1,4 +1,4 @@
-# Resumen clase 3 
+# RESUMEN CLASE 3 
 
 ## 1. Circuitos con amplificadores operacionales 
 
