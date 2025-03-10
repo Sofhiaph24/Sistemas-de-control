@@ -52,7 +52,7 @@ $q_{i} - A_{}\frac{dh_{1}}{dt} = A_{2}\frac{dh_{2}}{dt} + q_{2}$
 
 #### 1.3.2 Ejemplo tanques interconectados
 
-$q_{1} = \frac{h_{1} - h_{2}}{R_{1}}$
+$$q_{1} = \frac{h_{1} - h_{2}}{R_{1}}$$
 
 $A_{1}\frac{dh_{1}}{dt} = (q_{i} - q_{1})$
 
