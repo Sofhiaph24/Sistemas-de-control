@@ -2,22 +2,24 @@
 
 ## 1.  Introduccion 
 
-## 2. Estabilidad
-### 2.1. Descripcion 
+La estabilidad es una pieza fundamental a la hora de analisar y diseñar sistemas, debido a que este afecta el compotamiento que se tiene a lo largo del tiempo de funcionamiento. Los sistemas son considerados estables cuando ante una perturbacion que me afecta el sistema, puede mantenerse controlado, y regresar a su estado funcional 
 
-## 3. Teorema del valor final 
 
-## 4.   Analisas de estabilidad
-### 4.1. Analisis por teorema del valor final 
-### 4.2. Analisis por ubicacion de polos 
 
-## 5. Criterio de Routh Hurwitz
+## 2. Teorema del valor final 
 
-## 6. Diseño controlador estable 
+## 3.   Analisas de estabilidad
 
-## 7. Conclusion
+### 3.1. Analisis por teorema del valor final 
+### 3.2. Analisis por ubicacion de polos 
 
-## 8. Referencias
+## 4. Criterio de Routh Hurwitz
+
+## 5. Diseño controlador estable 
+
+## 6. Conclusion
+
+## 7. Referencias
 
 - C. Chen, Analog and digital control system design, New York, Saunders College Publishing
 - Introducción a los sistemas de control, R. Hernandez, Pearson, 2010
