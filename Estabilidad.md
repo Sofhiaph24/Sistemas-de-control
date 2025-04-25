@@ -2,9 +2,9 @@
 
 ## 1.  Introduccion 
 
-La estabilidad es una pieza fundamental a la hora de analisar y diseñar sistemas, debido a que este afecta el compotamiento que se tiene a lo largo del tiempo de funcionamiento. Los sistemas son considerados estables cuando ante una perturbacion que me afecta el sistema, puede mantenerse controlado, y regresar a su estado funcional 
+La estabilidad es una pieza fundamental a la hora de analisar y diseñar sistemas, debido a que este afecta el compotamiento que se tiene a lo largo del tiempo de funcionamiento. Los sistemas son considerados estables cuando ante una perturbacion que me afecta el sistema, puede mantenerse controlado, y regresar a un estado donde funcione correctamente.  
 
-
+En este trabajo se resumira lo visto en la clase, donde se explicaran los distintos metodos para determinar si un sistema es estable, los criterios que se tienen en cuenta, y como diseñar un controlador que nos ayude a estabilizar el sistema, todo esto con ejemplos y ejercicios para comprender mejor el tema
 
 ## 2. Teorema del valor final 
 
