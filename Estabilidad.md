@@ -10,8 +10,7 @@ En este trabajo se resumira lo visto en la clase, donde se explicaran los distin
 
 Lo primero que se vio en clase fue el teorema del valor final, el cual nos permite determinar el valor aproximado de una funcion en el tiempo, todo en terminos del dominio de Laplace. Este teorema dice:
 
-- \lim_{ t\to ∞ }
-
+-\lim_{ t\to \infty }
 
 ## 3.   Analisas de estabilidad
 
