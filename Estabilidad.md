@@ -33,11 +33,10 @@ Simplificamos la s, y nos queda una fraccion. Una vez reemplazada la s que multi
 
 $$\lim_{ s\to 0 } \frac{4}{5s+1} = 4$$
 
+
 ## 3.   Analisas de estabilidad
-
-
-
 ### 3.1. Analisis por teorema del valor final 
+
 ### 3.2. Analisis por ubicacion de polos 
 
 ## 4. Criterio de Routh Hurwitz
