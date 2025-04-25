@@ -26,6 +26,7 @@ Para este ejercicio decidimos trabajar con una entrada escalon, por lo tanto se 
 $$Y(s) = \frac{\frac{4}{s}}{5s+1}$$
 
 Para determinar el valor final de Y(s) utilizamos el teorema del valor final  
+
 $$sY\lim_{ s\to 0 } = s\lim_{ s\to 0 }* \frac{\frac{4}{s}}{5s+1}$$
 
 Simplificamos la s, y nos queda una fraccion. Una vez reemplazada la s que multiplica el 5 nos da el valor final de nuestra salida, el cual es 4.
