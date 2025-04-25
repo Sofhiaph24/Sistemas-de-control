@@ -12,7 +12,18 @@ Lo primero que se vio en clase fue el teorema del valor final, el cual nos permi
 
 $$f\lim_{ t\to \infty } (t) = sF\lim_{ s\to 0 } (s)$$
 
+### 2.1. Ejemplo 
+
+$$G(s) = \frac{Y(s)}{U(s)} = \frac{4}{5s + 1}$$
+$$Y(s) = \frac{4*U(s)}{5s+1}$$
+
+$$Y(s) = \frac{\frac{4}{s}}{5s+1}$$
+$$sY\lim_{ s\to 0 } = s\lim_{ s\to 0 }* \frac{\frac{4}{s}}{5s+1}$$
+$$\lim_{ s\to 0 } \frac{4}{5s+1} = 4$$
+
 ## 3.   Analisas de estabilidad
+
+
 
 ### 3.1. Analisis por teorema del valor final 
 ### 3.2. Analisis por ubicacion de polos 
