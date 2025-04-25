@@ -14,11 +14,22 @@ $$f\lim_{ t\to \infty } (t) = sF\lim_{ s\to 0 } (s)$$
 
 ### 2.1. Ejemplo 
 
+Para este ejemplo tenemos la siguiente funcion de transferencia
 $$G(s) = \frac{Y(s)}{U(s)} = \frac{4}{5s + 1}$$
+
+Lo primero que haremos para probar el teorema del valor final sera despejar la salida del sistema
+
 $$Y(s) = \frac{4*U(s)}{5s+1}$$
 
+Para este ejercicio decidimos trabajar con una entrada escalon, por lo tanto se reemplaza mi entrada por $${\frac{1}{s}}$$
+
 $$Y(s) = \frac{\frac{4}{s}}{5s+1}$$
+
+Para determinar el valor final de Y(s) utilizamos el teorema del valor final  
 $$sY\lim_{ s\to 0 } = s\lim_{ s\to 0 }* \frac{\frac{4}{s}}{5s+1}$$
+
+Simplificamos la s, y nos queda una fraccion. Una vez reemplazada la s que multiplica el 5 nos da el valor final de nuestra salida, el cual es 4.
+
 $$\lim_{ s\to 0 } \frac{4}{5s+1} = 4$$
 
 ## 3.   Analisas de estabilidad
