@@ -37,6 +37,19 @@ $$\lim_{ s\to 0 } \frac{4}{5s+1} = 4$$
 ## 3.   Analisas de estabilidad
 ### 3.1. Analisis por teorema del valor final 
 
+Para hacer el análisis de estabilidad por el método del valor final tendremos que comparar la entrada con la salida de nuestra función, para determinar si están limitadas de la misma forma.
+
+#### 3.1.1. Ejemplo 1
+
+$$U(S) = \frac{A}{S}$$
+$$s\lim_{ s\to 0} * U(S)$$
+$$s\lim_{s \to 0 } * \frac{A}{S} = A$$
+
+
+#### 3.1.2. Ejemplo 2
+
+
+
 ### 3.2. Analisis por ubicacion de polos 
 
 ## 4. Criterio de Routh Hurwitz
