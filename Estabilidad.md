@@ -41,14 +41,35 @@ Para hacer el análisis de estabilidad por el método del valor final tendremos 
 
 #### 3.1.1. Ejemplo 1
 
+En el siguitente ejemplo tenemos una funcion de tipo escalon, que vamos a comprobar si es estable
+
 $$U(S) = \frac{A}{S}$$
+
+Para saber si es estable vamos a usar el metodo del teorema del valor final explicado anteriormete, usando las formulas del limite cuando tiende a cero. 
+
 $$s\lim_{ s\to 0} * U(S)$$
+
+Lo que toca hacer es reemplazar nuestra funcion U(s) en nuestra ecuacion. Despues de eso sinplificamos nuestra "s" del numerador con la que multiplica el limite, y nos da que el resultado del analisis es "A"
+
 $$s\lim_{s \to 0 } * \frac{A}{S} = A$$
 
+Por lo tanto de este sistema podemos entender que es estable, debido a que el valor "A" esta limitado por la entrada
 
 #### 3.1.2. Ejemplo 2
 
+Para el segundo ejemplo se desea saber si la siguiente funcion es estable ante una entrada escalon, usando el metodo del teorema del valor final 
 
+$$G = \frac{8}{2s-1}$$
+
+Lo primero que hacemos es aplicar la formula del teorema y reemplazar valores con los de la funcion que tenemos.
+
+$$\lim_{s \to 0} * \frac{A}{S} * \frac{8}{2s-1}$$
+
+Despues de eso simplificamos terminos y reemplazamos la "s" sobrante por cero como indica el limite, dejandonos lo siguiente:
+
+$$frac{-8A}{1} = -8A$$
+
+Por ultimo simplificamos la funcion y nos queda -8A. Esto significa que la funcion no es estable, esto debido a que el escalon es positivo, pero la respuesta que obtenemo es negativo; por lo que no estan limitados de la misma manera
 
 ### 3.2. Analisis por ubicacion de polos 
 
