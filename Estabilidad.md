@@ -95,8 +95,25 @@ Se puede afirmar que el sistema es estable, debido a que su polo tiene la parte 
 
 ## 4. Criterio de Routh Hurwitz
 
-El polinomio de Hurwitz es uno donde todas sus raices tienen parte real negativa. Para 
+El polinomio de Hurwitz es uno donde todas sus raices tienen parte real negativa. La ventaja que tiene usar este metodo es que para encontrar el polinomio de Hurwitz no es necesario calcular las raices del polinomio, como con el metodo de ubicacion de polos.
 
+Teniendo el siguiente polinomio se puede explicar como se determina si un polinomio es de hurwitz:
+
+$$a_{0}s^{n} + a_{1}s^{n-1} + ... + a_{n-1}s +  a_{n} = 0 $$
+
+Para saber si es el polinomio que buscamos, ningun coeficiente debe ser cero y todos los coeficientes deben ser positivos. En dado caso que no se cumplan estos criterios el polinomio no sera uno de Hurwitz.
+
+
+|   |   |   |   |   |   |
+|---|---|---|---|---|---|
+| $s^{n}$  | $a_{0}$  | $a_{2}$  | $a_{4}$  | $a_{6}$  | $a_{8}$  |
+| $s^{n-1}$  | $a_{1}$  | $a_{3}$  | $a_{5}$  | $a_{7}$  | $a_{9}$  |
+| $s^{n-2}$  | $b_{1}$  | $b_{2}$  | $b_{3}$  | $b_{4}$  | $b_{5}$  |
+| $s^{n-3}$  | $c_{1}$  | $c_{2}$  | $c_{3}$  | $c_{4}$  | $c_{5}$  |
+| ...  | ...  | ...  | ...  | ...  | ...  |
+| $s^{1}$  | ...  | ...  | ...  | ...  | ...  |
+| $s^{0}$  | ...  | ...  | ...  | ...  | ...  |
+ 
 ## 5. Diseño controlador estable 
 
 ## 6. Conclusion
