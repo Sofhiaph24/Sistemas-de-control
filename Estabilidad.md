@@ -113,8 +113,60 @@ Para saber si es el polinomio que buscamos, ningun coeficiente debe ser cero y t
 | ...  | ...  | ...  | ...  | ...  | ...  |
 | $s^{1}$  | ...  | ...  | ...  | ...  | ...  |
 | $s^{0}$  | ...  | ...  | ...  | ...  | ...  |
- 
+
+
+
+
+### 4.1. Ejemplo 
+
+Para el primer ejemplo tenemos el siguiente polinomio:
+
+$$s^{3} + s^{2} +2s + 24 = 0$$ 
+
+Lo que vamos a hacer es calcular los siguientes polinomios.
+
+|   |   |   |
+|---|---|---|
+| $s^{3}$  | 1  | 2  |
+| $s^{2}$  | 1  | 24  |
+| $s^{1}$  |   |   |
+| $s^{0}$  |   |   |
+
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
+
+
+
+|   |   |   |   |
+|---|---|---|---|
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
+
+
 ## 5. Diseño controlador estable 
+
+
+
+
+
+
+
+|   |   |   |   |
+|---|---|---|---|
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
+|   |   |   |   |
+
+
 
 ## 6. Conclusion
 
