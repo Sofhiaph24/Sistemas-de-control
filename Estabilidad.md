@@ -73,7 +73,29 @@ Por ultimo simplificamos la funcion y nos queda -8A. Esto significa que la funci
 
 ### 3.2. Analisis por ubicacion de polos 
 
+Este criterio es mas sencillo de probar que el primero, ya que se deben cumplir una condicion para demostrar que el sistema es estable. Segun este analisis el sistema sera estable si sus polos tienen parte real negativa, que cuando se visualice aparezcan en el semiplano izquierdo; si por el contrario alguno de sus polos tienen parte real positiva el sistema sera inestable.
+
+#### 3.2.1. Ejemplo 
+
+Tenemos un ejercicio, donde tenemos la funcion de transferencia del sistema
+
+$$G = \frac{8}{2s+1}$$
+
+Lo primero que hacemos es determinar cuales son los polos como lo aprendido en clases anteriores.
+
+$$2s + 1 = 0$$
+
+Despejamos la ecuacion
+
+$$2s = -1$$
+
+$$s = -\frac{1}{2}$$
+
+Se puede afirmar que el sistema es estable, debido a que su polo tiene la parte real negativa
+
 ## 4. Criterio de Routh Hurwitz
+
+El polinomio de Hurwitz es uno donde todas sus raices tienen parte real negativa. Para 
 
 ## 5. Diseño controlador estable 
 
@@ -84,3 +106,4 @@ Por ultimo simplificamos la funcion y nos queda -8A. Esto significa que la funci
 - C. Chen, Analog and digital control system design, New York, Saunders College Publishing
 - Introducción a los sistemas de control, R. Hernandez, Pearson, 2010
 - Ogata, K. Ingeniería de Control Moderna. 5 edición. Prentice Hall
+ 
