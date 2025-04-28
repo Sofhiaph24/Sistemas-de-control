@@ -123,7 +123,7 @@ Para el primer ejemplo tenemos el siguiente polinomio:
 
 $$s^{3} + s^{2} +2s + 24 = 0$$ 
 
-Lo que vamos a hacer es calcular los siguientes polinomios.
+Ponemos nuestras condiciones inciales, que tenemos de nuestro polinomio inicial para calcular los siguientes coeficientes.
 
 |   |   |   |
 |---|---|---|
@@ -132,12 +132,19 @@ Lo que vamos a hacer es calcular los siguientes polinomios.
 | $s^{1}$  |   |   |
 | $s^{0}$  |   |   |
 
+Hacemos los calculos de b1 y c1
+
+$$b_{1} = \frac{(1*2) - (1*24)}{1} = - 22$$
+
+$$c_{1} = \frac{(-22*24) - (1*0)}{-22} = 24$$
+
+
 |   |   |   |
 |---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| $s^{3}$  | 1  | 2  |
+| $s^{2}$  | 1  | 24  |
+| $s^{1}$  | -22  | 0  |
+| $s^{0}$  | 24  |   |
 
 
 
