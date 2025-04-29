@@ -1,0 +1,189 @@
+# Análisis de Sistemas Dinámicos de Segundo Orden
+
+## Introducción
+
+Los sistemas dinámicos de segundo orden representan una clase fundamental de modelos matemáticos en la ingeniería de control y diversas disciplinas científicas. Su prevalencia se debe a que capturan la dinámica esencial de numerosos sistemas físicos, incluyendo circuitos eléctricos RLC, sistemas mecánicos de masa-resorte-amortiguador y otros fenómenos oscilatorios. El análisis riguroso de su comportamiento, particularmente frente a entradas canónicas como la función escalón, es indispensable para el diseño y la síntesis de sistemas de control robustos y eficientes. Este documento detalla la formulación estándar, los parámetros característicos y la respuesta temporal de dichos sistemas.
+
+## 1. Formulación Matemática: Ecuación Diferencial y Función de Transferencia
+
+La dinámica de un sistema lineal e invariante en el tiempo (LTI) de segundo orden se describe mediante una ecuación diferencial ordinaria de segundo orden:
+
+$$a_2 \frac{d^2y(t)}{dt^2} + a_1 \frac{dy(t)}{dt} + a_0 y(t) = b_0 u(t)$$
+
+Donde $y(t)$ denota la variable de salida y $u(t)$ la señal de entrada. Para fines de análisis y comparación, es práctica estándar normalizar la ecuación dividiéndola por el coeficiente $a_2$ (suponiendo $a_2 \neq 0$), resultando en:
+
+$$\frac{d^2y(t)}{dt^2} + \left(\frac{a_1}{a_2}\right) \frac{dy(t)}{dt} + \left(\frac{a_0}{a_2}\right) y(t) = \left(\frac{b_0}{a_2}\right) u(t)$$
+
+Mediante la aplicación de la Transformada de Laplace, asumiendo condiciones iniciales nulas para simplificar el análisis de la respuesta forzada, se transfiere la ecuación diferencial del dominio del tiempo al dominio de la frecuencia compleja 's':
+
+$$s^2 Y(s) + \left(\frac{a_1}{a_2}\right) s Y(s) + \left(\frac{a_0}{a_2}\right) Y(s) = \left(\frac{b_0}{a_2}\right) U(s)$$
+
+De esta expresión algebraica, se obtiene la función de transferencia $G(s)$, definida como el cociente entre la transformada de Laplace de la salida $Y(s)$ y la transformada de Laplace de la entrada $U(s)$:
+
+$$G(s) = \frac{Y(s)}{U(s)} = \frac{b_0/a_2}{s^2 + (a_1/a_2)s + (a_0/a_2)}$$
+
+Si bien esta representación es matemáticamente completa, no parametriza explícitamente las características dinámicas intrínsecas del sistema de una manera intuitiva para el diseño y análisis de control.
+
+## 2. Parametrización Canónica
+
+Para superar la limitación anterior y facilitar la interpretación de la dinámica del sistema, se adopta universalmente la forma canónica o estándar de la función de transferencia de segundo orden:
+
+$$G(s) = \frac{K \omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
+
+Esta forma parametriza el sistema mediante tres coeficientes de significado físico y de ingeniería directo:
+
+> 🔑 *Ganancia Estática (K):* Cuantifica la relación de estado estacionario entre la salida y una entrada constante. Específicamente, representa el factor de escala entre la amplitud de la salida y la amplitud de la entrada una vez que las componentes transitorias se han extinguido ($t \to \infty$, o equivalentemente $s \to 0$). Se calcula como $K = \lim_{s \to 0} G(s) = (b_0/a_2) / (a_0/a_2) = b_0 / a_0$.
+
+> 🔑 *Frecuencia Natural no Amortiguada ($\omega_n$):* Representa la frecuencia angular (en rad/s) a la cual el sistema oscilaría si se eliminara todo mecanismo de disipación de energía (amortiguamiento, $\zeta = 0$). Está determinada por las propiedades inerciales y elásticas intrínsecas del sistema. Se calcula como $\omega_n = \sqrt{a_0/a_2}$.
+
+> 🔑 *Factor de Amortiguamiento Relativo ($\zeta$):* Parámetro adimensional que caracteriza la tasa de disipación de energía del sistema en relación con la tasa crítica. Gobierna la naturaleza cualitativa de la respuesta transitoria, determinando si es oscilatoria o aperiódica. Se define como $\zeta = \frac{a_1/a_2}{2\omega_n} = \frac{a_1}{2\sqrt{a_0 a_2}}$.
+
+💡 **Ejemplo 1:**
+Analizar el sistema descrito por:
+$$G(s) = \frac{36}{s^2 + 4.2s + 36}$$
+Identificación de parámetros mediante comparación con la forma canónica $G(s) = \frac{K \omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$:
+* Del término constante del denominador: $\omega_n^2 = 36 \implies \omega_n = 6$ rad/s.
+* Del término lineal en 's' del denominador: $2\zeta\omega_n = 4.2 \implies \zeta = \frac{4.2}{2\omega_n} = \frac{4.2}{2(6)} = 0.35$.
+* Del numerador: $K\omega_n^2 = 36 \implies K(36) = 36 \implies K = 1$.
+Conclusión: El sistema presenta una ganancia estática unitaria ($K=1$), una frecuencia natural de 6 rad/s ($\omega_n=6$) y un factor de amortiguamiento de 0.35 ($\zeta=0.35$).
+
+## 3. Análisis de la Respuesta Temporal ante Escalón Unitario
+
+La respuesta a una entrada escalón unitario ($u(t) = A \cdot \mathbf{1}(t)$, $U(s) = A/s$, usualmente $A=1$) es una métrica estándar para evaluar el comportamiento dinámico. La morfología de $y(t)$ está intrínsecamente ligada al valor del factor de amortiguamiento $\zeta$.
+
+### 3.1. Clasificación de Respuestas según $\zeta$
+
+Los polos de la función de transferencia, raíces del polinomio característico $s^2 + 2\zeta\omega_n s + \omega_n^2 = 0$, son $s_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$. La naturaleza de estas raíces dicta el tipo de respuesta:
+
+* **Respuesta Subamortiguada ($0 < \zeta < 1$):** Polos complejos conjugados $s_{1,2} = -\zeta\omega_n \pm j\omega_n\sqrt{1-\zeta^2}$. La respuesta $y(t)$ exhibe oscilaciones sinusoidales amortiguadas exponencialmente alrededor del valor de estado estacionario $K \cdot A$. La frecuencia de estas oscilaciones es la frecuencia natural amortiguada $\omega_d = \omega_n\sqrt{1-\zeta^2}$. La solución temporal es:
+    $$y(t) = K \cdot A \left( 1 - \frac{e^{-\zeta\omega_n t}}{\sqrt{1-\zeta^2}} \sin(\omega_d t + \phi) \right), \quad \phi = \arccos(\zeta)$$
+
+* **Respuesta Críticamente Amortiguada ($\zeta = 1$):** Polos reales, negativos e idénticos $s_{1,2} = -\omega_n$. Representa la condición límite entre comportamiento oscilatorio y no oscilatorio, logrando la convergencia más rápida posible al estado estacionario sin sobrepaso. La solución temporal es:
+    $$y(t) = K \cdot A \left( 1 - e^{-\omega_n t}(1 + \omega_n t) \right)$$
+
+* **Respuesta Sobreamortiguada ($\zeta > 1$):** Polos reales, negativos y distintos $s_{1,2} = -\zeta\omega_n \pm \omega_n\sqrt{\zeta^2 - 1}$. La respuesta converge al estado estacionario de forma aperiódica y más lenta que la críticamente amortiguada. Es la superposición de dos modos exponenciales decrecientes:
+    $$y(t) = K \cdot A \left( 1 - C_1 e^{s_1 t} - C_2 e^{s_2 t} \right)$$
+    donde $C_1$ y $C_2$ son constantes determinadas por expansión en fracciones parciales.
+
+* **Respuesta No Amortiguada ($\zeta = 0$):** Polos imaginarios puros $s_{1,2} = \pm j\omega_n$. El sistema oscila perpetuamente a la frecuencia $\omega_n$ sin atenuación.
+* **Respuesta Inestable ($\zeta < 0$):** Al menos un polo en el semiplano derecho del plano complejo 's'. La respuesta diverge exponencialmente.
+
+![Tipos de respuesta a escalón para sistema de segundo orden](images/respuestas_segundo_orden.png)
+
+Figura 1. Morfología de la respuesta a escalón unitario en función de $\zeta$. (Fuente: Elaboración propia)
+
+### 3.2. Interpretación Geométrica: Plano de Polos 's'
+
+La ubicación de los polos $s_{1,2}$ en el plano complejo 's' encapsula la información dinámica:
+* **$\zeta > 1$:** Dos polos en el eje real negativo.
+* **$\zeta = 1$:** Un polo doble en el eje real negativo ($-\omega_n$).
+* **$0 < \zeta < 1$:** Un par de polos complejos conjugados en el semiplano izquierdo. Su distancia al origen es $\omega_n$. El coseno del ángulo que forman con el eje real negativo es $\zeta$. La parte real es $-\zeta\omega_n$ (tasa de decaimiento) y la parte imaginaria es $\pm \omega_d$ (frecuencia de oscilación).
+* **$\zeta = 0$:** Polos en el eje imaginario ($\pm j\omega_n$).
+* **$\zeta < 0$:** Polos en el semiplano derecho, indicando inestabilidad.
+
+![Ubicación de polos para sistema de segundo orden](images/polos_segundo_orden.png)
+
+Figura 2. Trayectoria de los polos en el plano 's' al variar $\zeta$ (con $\omega_n$ constante). (Fuente: Elaboración propia)
+
+### 3.3. Métricas Cuantitativas del Transitorio (Caso Subamortiguado)
+
+Para sistemas subamortiguados ($0 < \zeta < 1$), se emplean especificaciones temporales estándar para caracterizar la calidad de la respuesta transitoria:
+
+* **Tiempo de Pico ($t_p$):** Instante en que la respuesta alcanza su primer máximo (y máximo sobreimpulso).
+    $$t_p = \frac{\pi}{\omega_d} = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}}$$
+* **Máximo Sobreimpulso Porcentual ($M_P\%$):** Excursión máxima de la respuesta por encima del valor final, normalizada respecto a dicho valor y expresada en porcentaje. Depende únicamente de $\zeta$.
+    $$M_P = e^{\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}}$$   $$M_P\% = 100 \times M_P$$
+* **Tiempo de Asentamiento ($t_s$):** Tiempo requerido para que la respuesta converja y permanezca dentro de una banda especificada (usualmente $\pm 2\%$ o $\pm 5\%$) del valor de estado estacionario. Está determinado por la tasa de decaimiento exponencial $\zeta\omega_n$.
+    * Criterio del 2%: $t_s \approx \frac{4}{\zeta\omega_n}$ (aproximación basada en $e^{-4} \approx 0.018$)
+    * Criterio del 5%: $t_s \approx \frac{3}{\zeta\omega_n}$ (aproximación basada en $e^{-3} \approx 0.05$)
+* **Tiempo de Subida ($t_r$):** Intervalo temporal para que la respuesta transite entre porcentajes definidos (e.g., 10%-90% o 0%-100%) de su valor final. Su cálculo analítico es menos directo y depende de la definición exacta, pero generalmente es inversamente proporcional a $\omega_n$.
+
+![Parámetros de respuesta transitoria](images/parametros_transitorios.png)
+
+Figura 3. Definición gráfica de las especificaciones temporales para una respuesta subamortiguada. (Fuente: Elaboración propia)
+
+## 4. Influencia de Ceros en la Dinámica
+
+La introducción de ceros finitos en la función de transferencia $G(s)$ modifica la respuesta transitoria del sistema sin alterar su valor de estado estacionario. Un cero en el semiplano izquierdo ($s = -z$, con $z>0$) generalmente introduce una componente derivativa en la respuesta, tendiendo a incrementar el sobreimpulso y reducir el tiempo de subida, efecto más pronunciado cuanto más cerca esté el cero del origen. Un cero en el semiplano derecho (cero de fase no mínima) provoca efectos más complejos, como un subimpulso inicial (respuesta en dirección opuesta a la esperada) y puede incrementar significativamente el sobreimpulso, complicando el control.
+
+![Efecto de los ceros](images/efecto_ceros.png)
+
+Figura 4. Ilustración cualitativa del impacto de un cero adicional en la respuesta a escalón. (Fuente: Elaboración propia)
+
+## 5. Extensiones y Consideraciones Avanzadas
+
+### 5.1. Aproximación por Polos Dominantes
+
+En sistemas de orden superior ($n>2$), si un par de polos complejos conjugados (o un polo real) está significativamente más cerca del eje imaginario que todos los demás polos y ceros (aproximadamente 5-6 veces o más), estos se denominan *polos dominantes*. Bajo esta condición, la dinámica transitoria del sistema de orden superior puede ser razonablemente aproximada por la de un sistema de segundo (o primer) orden constituido únicamente por los polos dominantes, simplificando el análisis y diseño preliminar.
+
+### 5.2. Sistemas con Tiempo Muerto (Retardo)
+
+El tiempo muerto ($t_0$) representa un retardo puro en la transmisión de la señal, donde la salida $y(t)$ es una versión retardada de la respuesta sin retardo, $y(t) = y_{sin\_retardo}(t-t_0)$. En el dominio de Laplace, este retardo se modela multiplicando la función de transferencia por el término $e^{-st_0}$. La presencia de tiempo muerto no afecta la estabilidad (si el sistema original era estable) pero degrada el desempeño transitorio y complica significativamente el diseño del controlador, ya que introduce un desplazamiento de fase negativo que aumenta con la frecuencia.
+
+# Ejercicios de Aplicación
+
+## 📚 Ejercicio 1
+
+Considérese un sistema LTI representado por la función de transferencia:
+$$G(s) = \frac{100}{s^2 + 10s + 100}$$
+
+a) Determinar los parámetros canónicos: ganancia estática $K$, frecuencia natural $\omega_n$ y factor de amortiguamiento $\zeta$.
+b) Clasificar la naturaleza de su respuesta temporal.
+c) Estimar las métricas de desempeño transitorio: $t_p$, $M_P\%$ y $t_s$ (criterio del 2%).
+
+**Solución:**
+
+a) Por inspección directa y comparación con $G(s) = \frac{K \omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$:
+   * $\omega_n^2 = 100 \implies \omega_n = 10$ rad/s.
+   * $2\zeta\omega_n = 10 \implies \zeta = \frac{10}{2(10)} = 0.5$.
+   * $K\omega_n^2 = 100 \implies K = 1$.
+   **Resultados:** $K=1$, $\omega_n = 10$ rad/s, $\zeta = 0.5$.
+
+b) Dado que $0 < \zeta = 0.5 < 1$, el sistema exhibirá una **respuesta subamortiguada**.
+
+c) Cálculo de métricas:
+   * Frecuencia amortiguada: $\omega_d = \omega_n \sqrt{1-\zeta^2} = 10 \sqrt{1-0.5^2} = 10 \sqrt{0.75} \approx 8.66$ rad/s.
+   * Tiempo de pico: $t_p = \frac{\pi}{\omega_d} \approx \frac{\pi}{8.66} \approx 0.363$ s.
+   * Máximo sobreimpulso porcentual: $M_P\% = 100 \times e^{\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}} = 100 \times e^{\frac{-0.5\pi}{0.866}} \approx 100 \times e^{-1.813} \approx 100 \times 0.163 = 16.3\%$.
+   * Tiempo de asentamiento (2%): $t_s \approx \frac{4}{\zeta\omega_n} = \frac{4}{0.5 \times 10} = \frac{4}{5} = 0.8$ s.
+   **Resultados:** $t_p \approx 0.363$ s, $M_P\% \approx 16.3\%$, $t_s(2\%) = 0.8$ s.
+
+## 📚 Ejercicio 2
+
+Se requiere diseñar un sistema de control cuya dinámica en lazo cerrado sea aproximada por un modelo de segundo orden que satisfaga las siguientes especificaciones de desempeño ante escalón:
+* Máximo sobreimpulso ($M_P\%$) $\le 10\%$.
+* Tiempo de asentamiento ($t_s$) para el criterio del 5% $\le 1.5$ segundos.
+
+Derivar las restricciones resultantes sobre los parámetros $\zeta$ y $\omega_n$.
+
+**Solución:**
+
+1.  **Restricción por Sobreimpulso ($M_P\% \le 10\%$):**
+    $M_P \le 0.10 \implies e^{\frac{-\zeta\pi}{\sqrt{1-\zeta^2}}} \le 0.10$
+    Aplicando $\ln(\cdot)$ y reordenando:
+    $\frac{\zeta\pi}{\sqrt{1-\zeta^2}} \ge -\ln(0.10) \approx 2.3026$
+    Elevando al cuadrado:
+    $\frac{\zeta^2\pi^2}{1-\zeta^2} \ge (2.3026)^2 \approx 5.3019$
+    Resolviendo para $\zeta^2$:
+    $\zeta^2(\pi^2 + 5.3019) \ge 5.3019 \implies \zeta^2 \ge \frac{5.3019}{9.8696 + 5.3019} \approx 0.3495$
+    $\implies \zeta \ge \sqrt{0.3495} \approx 0.591$.
+    **Condición 1:** $\zeta \ge 0.591$. (Requiere $0.591 \le \zeta < 1$ para cumplir $M_P < 1$).
+
+2.  **Restricción por Tiempo de Asentamiento ($t_s(5\%) \le 1.5$ s):**
+    $t_s(5\%) \approx \frac{3}{\zeta\omega_n} \le 1.5$
+    Reordenando:
+    $\zeta\omega_n \ge \frac{3}{1.5} = 2$.
+    **Condición 2:** El producto $\zeta\omega_n \ge 2$.
+
+**Conclusión:** Las especificaciones de diseño imponen que el factor de amortiguamiento debe ser $\zeta \ge 0.591$ y la tasa de decaimiento exponencial $\zeta\omega_n$ debe ser mayor o igual a 2 s$^{-1}$. Cualquier par $(\zeta, \omega_n)$ que satisfaga simultáneamente ambas restricciones es admisible. Por ejemplo, $\zeta=0.6$ requiere $\omega_n \ge 2/0.6 \approx 3.33$ rad/s.
+
+## 4. Síntesis Conclusiva
+
+El modelo de segundo orden constituye una herramienta analítica esencial en ingeniería de control, proveyendo un marco para comprender la relación entre los parámetros físicos de un sistema y su respuesta dinámica. La forma canónica, a través de la ganancia estática $K$, la frecuencia natural $\omega_n$ y el factor de amortiguamiento $\zeta$, permite una caracterización concisa y significativa. El factor $\zeta$ emerge como el parámetro crítico que dicta la naturaleza cualitativa de la respuesta (oscilatoria vs. aperiódica), mientras que $\omega_n$ escala la velocidad de dicha respuesta. Las métricas temporales como $M_P$, $t_p$, y $t_s$ cuantifican aspectos clave del desempeño transitorio, directamente relacionados con $\zeta$ y $\omega_n$, y son fundamentales en la especificación y validación de sistemas de control. La comprensión profunda de estas interrelaciones es crucial para el diseño efectivo de sistemas que cumplan con requisitos dinámicos específicos.
+
+## 5. Referencias Bibliográficas
+
+* Cote B., J. E. (2024). *Sistemas de Segundo orden* [Material de clase, M7A Sistemas de Control I]. Escuela Tecnológica Instituto Técnico Central. (Archivo fuente: `6. Sistemas de segundo orden.pdf`) [cite: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+* Ogata, K. (2010). *Ingeniería de Control Moderna* (5ª ed.). Prentice Hall. [cite: 12, 18]
+* Nise, N. S. (2011). *Control Systems Engineering* (6th ed.). Wiley. [cite: 14, 16, 19]
+* Hernández G., R. (2010). *Introducción a los sistemas de control: un enfoque práctico*. Pearson Educación. [cite: 21, 22, 27]
