@@ -103,19 +103,10 @@ $$a_{0}s^{n} + a_{1}s^{n-1} + ... + a_{n-1}s +  a_{n} = 0 $$
 
 Para saber si es el polinomio que buscamos, ningun coeficiente debe ser cero y todos los coeficientes deben ser positivos. En dado caso que no se cumplan estos criterios el polinomio no sera uno de Hurwitz.
 
-
-|   |   |   |   |   |   |
-|---|---|---|---|---|---|
-| $s^{n}$  | $a_{0}$  | $a_{2}$  | $a_{4}$  | $a_{6}$  | $a_{8}$  |
-| $s^{n-1}$  | $a_{1}$  | $a_{3}$  | $a_{5}$  | $a_{7}$  | $a_{9}$  |
-| $s^{n-2}$  | $b_{1}$  | $b_{2}$  | $b_{3}$  | $b_{4}$  | $b_{5}$  |
-| $s^{n-3}$  | $c_{1}$  | $c_{2}$  | $c_{3}$  | $c_{4}$  | $c_{5}$  |
-| ...  | ...  | ...  | ...  | ...  | ...  |
-| $s^{1}$  | ...  | ...  | ...  | ...  | ...  |
-| $s^{0}$  | ...  | ...  | ...  | ...  | ...  |
+![](Imagenes/Hurwitz1.PNG).
 
 
-
+![](Imagenes/Hurwitz2.PNG).
 
 ### 4.1. Ejemplo 
 
@@ -138,6 +129,7 @@ $$b_{1} = \frac{(1 * 2) - (1 * 24)}{1} = - 22$$
 
 $$c_{1} = \frac{(-22 * 24) - (1 * 0)}{-22} = 24$$
 
+Una vez hecho esto los ponemos en la tabla 
 
 |   |   |   |
 |---|---|---|
