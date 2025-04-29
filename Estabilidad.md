@@ -170,9 +170,15 @@ El punto de tener varios metodos para determinar la estabilidad de un sistema, e
 
 Teniendo el siguiente sistema, usaremos el metodo de Rout Hurwitz para determinar si es estable; y en caso de no serlo se buscara el valor de kp para poder estabilizar el sistema.
 
-G(s) = \frac{1}{s^{4} + 3s^{3} + 3s^{2} + 2s}
+$$G(s) = \frac{1}{s^{4} + 3s^{3} + 3s^{2} + 2s}$$
 
 Se puede observar que no cumple con uno de los criterios, debido a que uno esta incompleto por lo tantosabemos que es inestable; por lo tanto toca buscar con que ganancia el sistema se estabiliza. 
+
+$$G_{0}(s) = \frac{K_{p}G(s)}{1 + K_{p}G(s)}$$
+
+$$G_{0}(s) = \frac{K_{p}}{ s^{4} + 3s^{3} + 3s^{2} + 2s + K_{p}}$$
+
+$$K_{p}}{ s^{4} + 3s^{3} + 3s^{2} + 2s + K_{p}$$
 
 
 
@@ -185,6 +191,13 @@ Se puede observar que no cumple con uno de los criterios, debido a que uno esta 
 |   |   |   |   |
 
 
+$$b_{1} = \frac{(3 * 3) - (1 * 2)}{3} = \frac{7}{3}$$
+
+$$b_{2} = \frac{(3 * k_{p}) - (1 * 0)}{3} = k_{p}$$
+
+$$c_{1} = \frac{(\frac{7}{3} * 2) - (3 * k_{p})}{\frac{7}{3}} = \frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}}$$
+
+$$d_{1} = \frac{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}} * k_{p} - \frac{7}{3} * 0}{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}}} = k_{p}$$
 
 ## 6. Conclusion
 
