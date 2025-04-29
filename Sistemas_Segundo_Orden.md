@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Los sistemas dinámicos de segundo orden representan una clase fundamental de modelos matemáticos en la ingeniería de control y diversas disciplinas científicas. Su prevalencia se debe a que capturan la dinámica esencial de numerosos sistemas físicos, incluyendo circuitos eléctricos RLC, sistemas mecánicos de masa-resorte-amortiguador y otros fenómenos oscilatorios. El análisis riguroso de su comportamiento, particularmente frente a entradas canónicas como la función escalón, es indispensable para el diseño y la síntesis de sistemas de control robustos y eficientes. Este documento detalla la formulación estándar, los parámetros característicos y la respuesta temporal de dichos sistemas.
+Los sistemas dinámicos de segundo orden representan una clase fundamental de modelos matemáticos en la ingeniería de control y diversas disciplinas científicas. Su uso se debe a que capturan la dinámica esencial de numerosos sistemas físicos, incluyendo circuitos eléctricos RLC, sistemas mecánicos de masa-resorte-amortiguador y otros fenómenos oscilatorios. El análisis riguroso de su comportamiento, particularmente frente a entradas canónicas como la función escalón, es indispensable para el diseño y la síntesis de sistemas de control robustos y eficientes.
 
 ## 1. Formulación Matemática: Ecuación Diferencial y Función de Transferencia
 
@@ -10,19 +10,19 @@ La dinámica de un sistema lineal e invariante en el tiempo (LTI) de segundo ord
 
 $$a_2 \frac{d^2y(t)}{dt^2} + a_1 \frac{dy(t)}{dt} + a_0 y(t) = b_0 u(t)$$
 
-Donde $y(t)$ denota la variable de salida y $u(t)$ la señal de entrada. Para fines de análisis y comparación, es práctica estándar normalizar la ecuación dividiéndola por el coeficiente $a_2$ (suponiendo $a_2 \neq 0$), resultando en:
+Donde $y(t)$ presenta la variable de salida y $u(t)$ la señal de entrada. Para fines de análisis y comparación, es práctica estándar normalizar la ecuación dividiéndola por el coeficiente $a_2$ (suponiendo $a_2 \neq 0$), resultando en:
 
 $$\frac{d^2y(t)}{dt^2} + \left(\frac{a_1}{a_2}\right) \frac{dy(t)}{dt} + \left(\frac{a_0}{a_2}\right) y(t) = \left(\frac{b_0}{a_2}\right) u(t)$$
 
-Mediante la aplicación de la Transformada de Laplace, asumiendo condiciones iniciales nulas para simplificar el análisis de la respuesta forzada, se transfiere la ecuación diferencial del dominio del tiempo al dominio de la frecuencia compleja 's':
+Mediante la Transformada de Laplace, con condiciones iniciales nulas para simplificar el análisis de la respuesta forzada, se transfiere la ecuación diferencial del tiempo a la frecuencia compleja 's':
 
 $$s^2 Y(s) + \left(\frac{a_1}{a_2}\right) s Y(s) + \left(\frac{a_0}{a_2}\right) Y(s) = \left(\frac{b_0}{a_2}\right) U(s)$$
 
-De esta expresión algebraica, se obtiene la función de transferencia $G(s)$, definida como el cociente entre la transformada de Laplace de la salida $Y(s)$ y la transformada de Laplace de la entrada $U(s)$:
+De esta expresión algebraica, se obtiene la función de transferencia $G(s)$, la cual se define como el cociente entre la transformada de Laplace de la salida $Y(s)$ y la transformada de Laplace de la entrada $U(s)$:
 
 $$G(s) = \frac{Y(s)}{U(s)} = \frac{b_0/a_2}{s^2 + (a_1/a_2)s + (a_0/a_2)}$$
 
-Si bien esta representación es matemáticamente completa, no parametriza explícitamente las características dinámicas intrínsecas del sistema de una manera intuitiva para el diseño y análisis de control.
+Si bien esta representación es matemáticamente completa, no parametriza directamente las características dinámicas incluidas del sistema de una manera intuitiva para el diseño y análisis de control.
 
 ## 2. Parametrización Canónica
 
@@ -30,7 +30,7 @@ Para superar la limitación anterior y facilitar la interpretación de la dinám
 
 $$G(s) = \frac{K \omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$$
 
-Esta forma parametriza el sistema mediante tres coeficientes de significado físico y de ingeniería directo:
+Esta forma parametriza el sistema mediante tres coeficientes de significado físico:
 
 > 🔑 *Ganancia Estática (K):* Cuantifica la relación de estado estacionario entre la salida y una entrada constante. Específicamente, representa el factor de escala entre la amplitud de la salida y la amplitud de la entrada una vez que las componentes transitorias se han extinguido ($t \to \infty$, o equivalentemente $s \to 0$). Se calcula como $K = \lim_{s \to 0} G(s) = (b_0/a_2) / (a_0/a_2) = b_0 / a_0$.
 
@@ -183,7 +183,7 @@ El modelo de segundo orden constituye una herramienta analítica esencial en ing
 
 ## 5. Referencias Bibliográficas
 
-* Cote B., J. E. (2024). *Sistemas de Segundo orden* [Material de clase, M7A Sistemas de Control I]. Escuela Tecnológica Instituto Técnico Central. (Archivo fuente: `6. Sistemas de segundo orden.pdf`) [cite: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-* Ogata, K. (2010). *Ingeniería de Control Moderna* (5ª ed.). Prentice Hall. [cite: 12, 18]
-* Nise, N. S. (2011). *Control Systems Engineering* (6th ed.). Wiley. [cite: 14, 16, 19]
-* Hernández G., R. (2010). *Introducción a los sistemas de control: un enfoque práctico*. Pearson Educación. [cite: 21, 22, 27]
+* Cote B., J. E. (2024). *Sistemas de Segundo orden* [Material de clase, M7A Sistemas de Control I]. Escuela Tecnológica Instituto Técnico Central. (Archivo fuente: `6. Sistemas de segundo orden.pdf`) 
+* Ogata, K. (2010). *Ingeniería de Control Moderna* (5ª ed.). Prentice Hall.
+* Nise, N. S. (2011). *Control Systems Engineering* (6th ed.). Wiley.
+* Hernández G., R. (2010). *Introducción a los sistemas de control: un enfoque práctico*. Pearson Educación.
