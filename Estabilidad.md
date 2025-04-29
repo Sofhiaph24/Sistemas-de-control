@@ -152,16 +152,6 @@ Una vez hecho esto los ponemos en la tabla, con los coeficientes calculados.
 | $s^{0}$  | 24  |   |
 
 
-
-
-|   |   |   |   |
-|---|---|---|---|
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-|   |   |   |   |
-
-
 ## 5. Diseño controlador estable 
 
 El punto de tener varios metodos para determinar la estabilidad de un sistema, esta en poder diseñar un controlador con una ganancia Kp que pueda estabilizar el sistema.
@@ -198,6 +188,17 @@ $$b_{2} = \frac{(3 * k_{p}) - (1 * 0)}{3} = k_{p}$$
 $$c_{1} = \frac{(\frac{7}{3} * 2) - (3 * k_{p})}{\frac{7}{3}} = \frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}}$$
 
 $$d_{1} = \frac{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}} * k_{p} - \frac{7}{3} * 0}{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}}} = k_{p}$$
+
+$$\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}} > 0$$
+
+$$\frac{14}{3} - 3k_{p} > 0$$
+
+$$k_{p} < \frac{14}{9}$$
+
+$$k_{p} > 0$$
+
+$$0 < k_{p} < \frac{14}{9}$$
+
 
 ## 6. Conclusion
 
