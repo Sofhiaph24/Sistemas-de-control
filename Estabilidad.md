@@ -212,11 +212,32 @@ Despues con d1 es mas sencillo, ya que sabemos que nuestra ganancia es mayor a c
 
 $$0 < k_{p} < \frac{14}{9}$$
 
-Por lo tanto nuestro sistema sera estable cuando nuestra ganancia sea mayor a cero y menor a $\frac{14}{9}$ 
+Por lo tanto nuestro sistema sera estable cuando nuestra ganancia proporcional sea mayor a cero y menor a $\frac{14}{9}$ 
 
-## 6. Conclusion
+## 6. Ejercicios
 
-## 7. Referencias
+$$G(s) = \frac{3s^{2} + 2s - 1}{s^{3} + 2s^{2} + 4s - 1}$$
+
+$$s^{3} + 2s^{2} + 4s - 1$$
+
+|   |   |   |
+|---|---|---|
+| $s^{3}$  | 1  | 4  |
+| $s^{2}$  | 2  | 1  |
+| $s^{1}$  | 2  | 0  |
+| $s^{0}$  | 1  |   |
+
+$$b_{1} = \frac{(2)(4) - (1)(1)}{2} = 2$$
+
+$$b_{2} = \frac{(1)(0) - (1)(0)}{1} = 0$$
+
+$$c_{1} = \frac{(2)(1) - (2)(0)}{2} = 1$$
+
+## 7. Conclusion
+
+
+
+## 8. Referencias
 
 - C. Chen, Analog and digital control system design, New York, Saunders College Publishing
 - Introducción a los sistemas de control, R. Hernandez, Pearson, 2010
