@@ -299,4 +299,5 @@ Entonces entre 5 y 34 $k_{p}$ estabilizara el sistema.
 - C. Chen, Analog and digital control system design, New York, Saunders College Publishing
 - Introducción a los sistemas de control, R. Hernandez, Pearson, 2010
 - Ogata, K. Ingeniería de Control Moderna. 5 edición. Prentice Hall
+- Alex Carvajal, Ejercicios de estabilidad. teoría de control, Universidad Politécnica Salesiana
  
