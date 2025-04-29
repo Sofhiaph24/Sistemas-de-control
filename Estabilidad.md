@@ -67,7 +67,7 @@ $$\lim_{s \to 0} * \frac{A}{S} * \frac{8}{2s-1}$$
 
 Despues de eso simplificamos terminos y reemplazamos la "s" sobrante por cero como indica el limite, dejandonos lo siguiente:
 
-$$frac{-8A}{1} = -8A$$
+$$\frac{-8A}{1} = -8A$$
 
 Por ultimo simplificamos la funcion y nos queda -8A. Esto significa que la funcion no es estable, esto debido a que el escalon es positivo, pero la respuesta que obtenemo es negativo; por lo que no estan limitados de la misma manera
 
