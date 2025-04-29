@@ -134,9 +134,9 @@ Ponemos nuestras condiciones inciales, que tenemos de nuestro polinomio inicial 
 
 Hacemos los calculos de b1 y c1
 
-$$b_{1} = \frac{1 * 2 - 1 * 24}{1} = - 22$$
+$$b_{1} = \frac{(1 * 2) - (1 * 24)}{1} = - 22$$
 
-$$c_{1} = \frac{-22 * 24 - 1 * 0}{-22} = 24$$
+$$c_{1} = \frac{(-22 * 24) - (1 * 0)}{-22} = 24$$
 
 
 |   |   |   |
