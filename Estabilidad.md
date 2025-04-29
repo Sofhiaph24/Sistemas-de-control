@@ -142,7 +142,7 @@ $$b_{1} = \frac{(1 * 2) - (1 * 24)}{1} = - 22$$
 
 $$c_{1} = \frac{(-22 * 24) - (1 * 0)}{-22} = 24$$
 
-Una vez hecho esto los ponemos en la tabla 
+Una vez hecho esto los ponemos en la tabla, con los coeficientes calculados.
 
 |   |   |   |
 |---|---|---|
@@ -164,9 +164,15 @@ Una vez hecho esto los ponemos en la tabla
 
 ## 5. Diseño controlador estable 
 
+El punto de tener varios metodos para determinar la estabilidad de un sistema, esta en poder diseñar un controlador con una ganancia Kp que pueda estabilizar el sistema.
 
+### 5.1. Ejemplo 
 
+Teniendo el siguiente sistema, usaremos el metodo de Rout Hurwitz para determinar si es estable; y en caso de no serlo se buscara el valor de kp para poder estabilizar el sistema.
 
+G(s) = \frac{1}{s^{4} + 3s^{3} + 3s^{2} + 2s}
+
+Se puede observar que no cumple con uno de los criterios, debido a que uno esta incompleto por lo tantosabemos que es inestable; por lo tanto toca buscar con que ganancia el sistema se estabiliza. 
 
 
 
