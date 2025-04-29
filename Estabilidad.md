@@ -101,12 +101,25 @@ Teniendo el siguiente polinomio se puede explicar como se determina si un polino
 
 $$a_{0}s^{n} + a_{1}s^{n-1} + ... + a_{n-1}s +  a_{n} = 0 $$
 
-Para saber si es el polinomio que buscamos, ningun coeficiente debe ser cero y todos los coeficientes deben ser positivos. En dado caso que no se cumplan estos criterios el polinomio no sera uno de Hurwitz.
+Para saber si es el polinomio que buscamos, ningun coeficiente debe ser cero y todos los coeficientes deben ser positivos. En dado caso que no se cumplan estos criterios el polinomio no sera de Hurwitz.
+
+Lo primero que haremos sera poner nuestros datos desde a1 hasta an, ocupando las dos primeras filas, como se muestra en la siguiente imagen:
 
 ![](Imagenes/Hurwitz1.PNG).
 
+Para calcular los coeficientes haremos lo siguiente.
 
 ![](Imagenes/Hurwitz2.PNG).
+
+$$b_{1} = \frac{a_{1}a_{2} - a_{0}a_{3}}{a_{1}}$$
+
+$$b_{2} = \frac{a_{1}a_{4} - a_{0}a_{5}}{a_{1}}$$
+
+$$c_{1} = \frac{b_{1}a_{3} - a_{1}b_{2}}{b_{1}}$$
+
+$$c_{2} = \frac{b_{1}a_{5} - a_{1}b_{3}}{b_{1}}$$
+
+Y siguiendo este patron podremos calcular los coeficientes que necesitamos 
 
 ### 4.1. Ejemplo 
 
