@@ -164,13 +164,19 @@ $$G(s) = \frac{1}{s^{4} + 3s^{3} + 3s^{2} + 2s}$$
 
 Se puede observar que no cumple con uno de los criterios, debido a que uno esta incompleto por lo tantosabemos que es inestable; por lo tanto toca buscar con que ganancia el sistema se estabiliza. 
 
+Lo primero que se hace es calcular el controlador con la formula aprendida en clases anteriores.
+
 $$G_{0}(s) = \frac{K_{p}G(s)}{1 + K_{p}G(s)}$$
+
+Despejamos hasta que nos queda lo siguiente
 
 $$G_{0}(s) = \frac{K_{p}}{ s^{4} + 3s^{3} + 3s^{2} + 2s + K_{p}}$$
 
+Con eso nos queda el polinomio que utilizaremos para encontrar la ganancia
+
 $$s^{4} + 3s^{3} + 3s^{2} + 2s + K_{p} = 0$$
 
-
+Hacemos la tabla donde agregaremos los criterios que necesitamos 
 
 |   |   |   |   |
 |---|---|---|---|
@@ -189,16 +195,24 @@ $$c_{1} = \frac{(\frac{7}{3} * 2) - (3 * k_{p})}{\frac{7}{3}} = \frac{\frac{14}{
 
 $$d_{1} = \frac{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}} * k_{p} - \frac{7}{3} * 0}{\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}}} = k_{p}$$
 
+Una vez obtenidos todos los criterios podemos usar los ultimos dos para obtener en que valor tendremos la ganancia para que el sistema sea estable. 
+
+
 $$\frac{\frac{14}{3} - 3k_{p}}{\frac{7}{3}} > 0$$
 
 $$\frac{14}{3} - 3k_{p} > 0$$
 
 $$k_{p} < \frac{14}{9}$$
 
+Primero despejamos Kp de C1, y eso nos dio que la ganancia debe ser menor a $\frac{14}{9}$ 
+
 $$k_{p} > 0$$
+
+Despues con d1 es mas sencillo, ya que sabemos que nuestra ganancia es mayor a cero 
 
 $$0 < k_{p} < \frac{14}{9}$$
 
+Por lo tanto nuestro sistema sera estable cuando nuestra ganancia sea mayor a cero y menor a $\frac{14}{9}$ 
 
 ## 6. Conclusion
 
