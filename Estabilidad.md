@@ -12,7 +12,7 @@ Lo primero que se vio en clase fue el teorema del valor final, el cual nos permi
 
 $$f\lim_{ t\to \infty } (t) = sF\lim_{ s\to 0 } (s)$$
 
-### 2.1. Ejemplo 
+### 💡2.1. Ejemplo 
 
 Para este ejemplo tenemos la siguiente funcion de transferencia
 $$G(s) = \frac{Y(s)}{U(s)} = \frac{4}{5s + 1}$$
@@ -39,7 +39,7 @@ $$\lim_{ s\to 0 } \frac{4}{5s+1} = 4$$
 
 Para hacer el análisis de estabilidad por el método del valor final tendremos que comparar la entrada con la salida de nuestra función, para determinar si están limitadas de la misma forma.
 
-#### 3.1.1. Ejemplo 1
+#### 💡3.1.1. Ejemplo 1
 
 En el siguitente ejemplo tenemos una funcion de tipo escalon, que vamos a comprobar si es estable
 
@@ -55,7 +55,7 @@ $$s\lim_{s \to 0 } * \frac{A}{S} = A$$
 
 Por lo tanto de este sistema podemos entender que es estable, debido a que el valor "A" esta limitado por la entrada
 
-#### 3.1.2. Ejemplo 2
+#### 💡3.1.2. Ejemplo 2
 
 Para el segundo ejemplo se desea saber si la siguiente funcion es estable ante una entrada escalon, usando el metodo del teorema del valor final 
 
@@ -75,7 +75,7 @@ Por ultimo simplificamos la funcion y nos queda -8A. Esto significa que la funci
 
 Este criterio es mas sencillo de probar que el primero, ya que se deben cumplir una condicion para demostrar que el sistema es estable. Segun este analisis el sistema sera estable si sus polos tienen parte real negativa, que cuando se visualice aparezcan en el semiplano izquierdo; si por el contrario alguno de sus polos tienen parte real positiva el sistema sera inestable.
 
-#### 3.2.1. Ejemplo 
+#### 💡3.2.1. Ejemplo 
 
 Tenemos un ejercicio, donde tenemos la funcion de transferencia del sistema
 
@@ -121,7 +121,7 @@ $$c_{2} = \frac{b_{1}a_{5} - a_{1}b_{3}}{b_{1}}$$
 
 Y siguiendo este patron podremos calcular los coeficientes que necesitamos 
 
-### 4.1. Ejemplo 
+### 💡4.1. Ejemplo 
 
 Para el primer ejemplo tenemos el siguiente polinomio:
 
@@ -156,7 +156,7 @@ Una vez hecho esto los ponemos en la tabla, con los coeficientes calculados.
 
 El punto de tener varios metodos para determinar la estabilidad de un sistema, esta en poder diseñar un controlador con una ganancia Kp que pueda estabilizar el sistema.
 
-### 5.1. Ejemplo 
+### 5.1.💡 Ejemplo 
 
 Teniendo el siguiente sistema, usaremos el metodo de Rout Hurwitz para determinar si es estable; y en caso de no serlo se buscara el valor de kp para poder estabilizar el sistema.
 
@@ -216,11 +216,15 @@ Por lo tanto nuestro sistema sera estable cuando nuestra ganancia proporcional s
 
 ## 6. Ejercicios
 
-### 6.1. Ejercicio 1
+### 6.1. 📚Ejercicio 1
+
+Para el primer ejercicio necesitamos comprobar si el sistema es estable
 
 $$G(s) = \frac{3s^{2} + 2s - 1}{s^{3} + 2s^{2} + 4s - 1}$$
 
-$$s^{3} + 2s^{2} + 4s - 1$$
+Lo primero que haremos es ver que cumple con los criterios (El polinomio esta completo, y los coeficientes son positivos); despues tomamos la ecuacion caracteristica y aplicamos el metodo de Rout Hurwitz.
+
+$$s^{3} + 2s^{2} + 4s + 1$$
 
 |   |   |   |
 |---|---|---|
@@ -235,17 +239,27 @@ $$b_{2} = \frac{(1)(0) - (1)(0)}{1} = 0$$
 
 $$c_{1} = \frac{(2)(1) - (2)(0)}{2} = 1$$
 
-### 6.2. Ejercicio 2
+Una vez terminamos de llenar la tabla observamos que los coeficientes de la primera columna no presentan ningun cambio, por lo que tenemos que los polos tienen parte real negativa, y el sistema es estable. 
+
+### 6.2. 📚Ejercicio 2
 
 ![](Imagenes/KpHurwitz.PNG).
 
+Para el segundo ejercicio comprobaremos la estabilidad del sistema y añadiremos una ganancia en el controlador para estabilizar el sistema.
+
 $$\frac{s^{2} + 3s - k}{s^{3} + 2s^{2} + 10s + 5}$$
+
+Lo primero que hacemos es calcular el controlador, para saber como hallaremos la ganancia, esto se hace con la siguiente formula:
 
 $$Go(s) = \frac{k_{p}G(s)}{1 + k_{p}G(s)}$$
 
 $$\frac{s^{2} + 3s - k_{p}}{s^{3} + 3s^{2} + 13s + 5 - k}$$
 
+Una vez calculado, tendremos la ecuacion caracteristica, a la cual le aplicaremos la tabla de Rour Hurwitz.
+
 $$s^{3} + 3s^{2} + 13s + (5 - k_{p})$$
+
+Para que el sistema sea estable, todos los coeficientes deben ser positivos por lo tanto  $(5 - k_{p}) > 0$, y el polinomio debe estar completo, por lo que $k_{p}$ debe ser diferente de 5  
 
 |   |   |   |
 |---|---|---|
@@ -256,16 +270,25 @@ $$s^{3} + 3s^{2} + 13s + (5 - k_{p})$$
 
 $$b_{1} = \frac{(3)(13) - (1)(5-k_{p})}{3} > 0$$
 
+Una vez calculamos b1 sabemos que tiene que ser mayor que cero, por lo que usando esa igualacion podremos saber el primer limiete de $k_{p}$
+
 $$39 - 5 + k_{p} > 0$$
 
 $$k_{p} > - 34$$
+
+$k_{p}$ debe ser menor que 34
+
+Como sabemos que 5 menos $k_{p}$ es mayor que cero podemos hacer el siguiente limite
 
 $$5 - k_{p} > 0$$
 
 $$k_{p} > 5$$
 
+Esto nos da que $k_{p}$ es mayor que 5
+
 $$5 < k_{p} < 34$$
 
+Entonces entre 5 y 34 $k_{p}$ estabilizara el sistema. 
 
 ## 7. Conclusion
 
